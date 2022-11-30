@@ -5,33 +5,18 @@ using UnityEngine;
 public class Stars_Particles_Spiral_Script : MonoBehaviour
 {
     public GameObject Promien;
-    public GameObject DebugMarker;
-    //public GameObject GalaxyKamera; //odleglosc od galaktyki
 
     ParticleSystem.Particle p;
     private ParticleSystem ps;
     List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
 
-    public bool moveLock = false;    //blokada na poruszanie
-    public float speed;
+    public GameObject CameraStars;
+    public bool TrigModule = false;
 
-    public void Raying(bool x)
-    {
-        Debug.Log("Raying(): " + x);
-
-        if (x)
-        {
-            Promien.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
-        else
-        {
-            Promien.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
-        }
-    }
 
     void Start()
     {
-       
+        ps.trigger.SetCollider(0, Promien.GetComponent<Collider>());
     }
 
     void OnEnable()
@@ -43,38 +28,40 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
 
     void Update()
     {
-        if (true) //jesli aktuanie w Layer.Stars
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                Debug.Log("Star Level Ray Shoot");
-                Raying(true);
-            }
-            else
-            {
-                Raying(false);
-            }
+            TrigModule = true;
+        }
+        //if ( !(Input.GetKeyDown(KeyCode.Mouse0)) )
+        else
+        {
+            TrigModule = false;
         }
     }
 
     void OnParticleTrigger()
     {
-        Debug.Log("-- ParticleTrigger() --");
-
-        if (ps == null)
+        if (TrigModule)
         {
-            Debug.LogError("Could not find a particle system");
+            Debug.Log("-- ParticleTrigger() --");
+
+            if (ps == null)
+            {
+                Debug.LogError("Could not find a particle system");
+                return;
+            }
+
+            int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+
+            if (numEnter == 0)
+            {
+                return;
+            }
+
+            CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position = enter[0].position;
+            CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = transform.TransformPoint(CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position);
+            CameraStars.GetComponent<CameraStars_Script>().WDrodze = true;
         }
-
-        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
-
-        if (numEnter == 0)
-        {
-            return;
-        }
-
-        DebugMarker.transform.position = enter[0].position;
-        Debug.Log("poz: " + p.position);
     }
 
     void OnParticleCollision(GameObject other)
@@ -88,5 +75,10 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
     { 
         GetComponent<ParticleSystem>().Clear();
         GetComponent<ParticleSystem>().Play();
+    }
+
+    public void NicNieWidac()
+    {
+        GetComponent<ParticleSystem>().Clear();
     }
 }

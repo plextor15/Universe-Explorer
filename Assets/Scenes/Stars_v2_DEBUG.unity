@@ -5798,7 +5798,7 @@ PrefabInstance:
     - target: {fileID: 1686978545657914345, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 9000
+      value: 90000
       objectReference: {fileID: 0}
     - target: {fileID: 1686978545657914345, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
@@ -5818,7 +5818,7 @@ PrefabInstance:
     - target: {fileID: 4508224386729143736, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 1000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4508224386729143736, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}

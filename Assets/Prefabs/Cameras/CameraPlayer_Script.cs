@@ -23,8 +23,8 @@ public class CameraPlayer_Script : MonoBehaviour
     public GameObject Camera_Body;
 
     //Prefaby od warstw
-    public GameObject Prefab_Galaxy;
-    public GameObject Prefab_Stars;
+    //public GameObject Prefab_Galaxy;
+    //public GameObject Prefab_Stars;
     public GameObject Prefab_SolarSys;
     public GameObject Prefab_CelestialBdoy;
 
@@ -129,12 +129,13 @@ public class CameraPlayer_Script : MonoBehaviour
             ChangeSpeed(Mathf.NegativeInfinity);
         }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Camera_Sol.GetComponent<CameraSol_Script>().Raycasting();
-        }
+        //Kazda kamera ma wlasny Raying()
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    Camera_Sol.GetComponent<CameraSol_Script>().Raycasting();
+        //}
 
-        if (Input.GetKey("h")) //help
+        if (Input.GetKeyDown("h")) //help
         {
             if (help.activeInHierarchy)
             { 
@@ -163,8 +164,9 @@ public class CameraPlayer_Script : MonoBehaviour
         }
         if (currentLayer == Warstwy.Stars)
         {
-            Camera_Galaxy.transform.Translate(kierunek * speed * Time.deltaTime / 10000, Space.Self);
-            //Camera_Stars.transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self); //TO GWIAZDY SIE RUSZJA, NIE KAMERA!!
+            //Camera_Galaxy.transform.Translate(kierunek * speed * Time.deltaTime / 10000, Space.Self);
+            //Camera_Stars.transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+            Camera_Stars.transform.Translate(kierunek * speed * Time.deltaTime, Space.Self);
         }
         if (currentLayer == Warstwy.SolarSys)
         {
@@ -183,7 +185,9 @@ public class CameraPlayer_Script : MonoBehaviour
             previousLayer = currentLayer;
             currentLayer = Warstwy.CelestialBody;
 
-            Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
+            Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
+
+            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
@@ -198,7 +202,7 @@ public class CameraPlayer_Script : MonoBehaviour
             previousLayer = currentLayer;
             currentLayer = Warstwy.SolarSys;
 
-            Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
+            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
 
             //Camera_Sol skierowana na gwiazde i w odpowiedniej odleglosci
@@ -208,7 +212,8 @@ public class CameraPlayer_Script : MonoBehaviour
                 Camera_Sol.transform.rotation = Camera_Stars.transform.rotation;
                 Camera_Sol.transform.Translate(Vector3.back * 10, Space.Self);
             }
-            
+
+            Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
 
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
@@ -220,16 +225,18 @@ public class CameraPlayer_Script : MonoBehaviour
 
         if (w == Warstwy.Stars)
         {
-            if (currentLayer == Warstwy.Galaxy)
-            {
-                Stars.GetComponent<ParticleSystem>().Clear();
-                Stars.GetComponent<ParticleSystem>().Play();
-            }
+            //if (currentLayer == Warstwy.Galaxy)
+            //{
+            //    Stars.GetComponent<ParticleSystem>().Clear();
+            //    Stars.GetComponent<ParticleSystem>().Play();
+            //}
 
             previousLayer = currentLayer;
             currentLayer = Warstwy.Stars;
 
-            Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = false;
+            Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = true;
+
+            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = false;
             Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
@@ -244,7 +251,9 @@ public class CameraPlayer_Script : MonoBehaviour
             previousLayer = currentLayer;
             currentLayer = Warstwy.Galaxy;
 
-            Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
+            Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
+
+            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = false;
@@ -263,7 +272,7 @@ public class CameraPlayer_Script : MonoBehaviour
             speed = 0;
         }
 
-        Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().speed = speed;
+        //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().speed = speed;
 
         Speed_UI.text = speed.ToString() + " units / s";
 

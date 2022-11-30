@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1458260618475047551, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566529015878369476, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
       propertyPath: m_Color.a
@@ -254,6 +259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802880751645703711, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6605225534013182677, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
@@ -618,6 +628,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063546097}
     m_Modifications:
+    - target: {fileID: 1686978545657914345, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: TriggerModule.primitives.Array.data[0]
+      value: 
+      objectReference: {fileID: 745845033}
+    - target: {fileID: 4508224386729143736, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: TriggerModule.primitives.Array.data[0]
+      value: 
+      objectReference: {fileID: 745845033}
     - target: {fileID: 6651290522778782367, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: m_RootOrder
@@ -678,15 +698,40 @@ PrefabInstance:
       propertyPath: Promien
       value: 
       objectReference: {fileID: 745845032}
+    - target: {fileID: 7415413752612834171, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 7415413752612834171, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: DebugMarker
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7490374486296711171, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: Promien
       value: 
       objectReference: {fileID: 745845032}
+    - target: {fileID: 7490374486296711171, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 7490374486296711171, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: DebugMarker
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9111715913497382011, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: m_Name
       value: Stars_Particles_Spiral
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111715913497382011, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73133f2f12045c64d835e6db97cd2ad4, type: 3}
@@ -778,6 +823,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063546097}
     m_Modifications:
+    - target: {fileID: -1236121211693417528, guid: 9d43affc3d216694292268223e9ad3ba,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1236121211693417528, guid: 9d43affc3d216694292268223e9ad3ba,
+        type: 3}
+      propertyPath: Camera_player
+      value: 
+      objectReference: {fileID: 1001508173}
     - target: {fileID: 2881812673409987377, guid: 9d43affc3d216694292268223e9ad3ba,
         type: 3}
       propertyPath: m_RootOrder
@@ -786,7 +841,7 @@ PrefabInstance:
     - target: {fileID: 2881812673409987377, guid: 9d43affc3d216694292268223e9ad3ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -188.9
+      value: -327.6
       objectReference: {fileID: 0}
     - target: {fileID: 2881812673409987377, guid: 9d43affc3d216694292268223e9ad3ba,
         type: 3}
@@ -861,6 +916,12 @@ Camera:
 --- !u!1 &745845032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1296627387696613421, guid: 9d43affc3d216694292268223e9ad3ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 745845028}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &745845033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9103610570618198829, guid: 9d43affc3d216694292268223e9ad3ba,
     type: 3}
   m_PrefabInstance: {fileID: 745845028}
   m_PrefabAsset: {fileID: 0}
@@ -1244,7 +1305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1099243237
 Transform:
   m_ObjectHideFlags: 0
@@ -1496,7 +1557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1536476515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,7 +1672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1729853111
 Transform:
   m_ObjectHideFlags: 0

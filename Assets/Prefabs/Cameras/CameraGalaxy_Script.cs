@@ -5,11 +5,10 @@ using UnityEngine;
 public class CameraGalaxy_Script : MonoBehaviour
 {
     public GameObject Player;
-    private Component PlayerLogic;
 
     void Start()
     {
-        //PlayerLogic = Player.GetComponent<CameraPlayer_Script>();
+        
     }
 
     void Update()

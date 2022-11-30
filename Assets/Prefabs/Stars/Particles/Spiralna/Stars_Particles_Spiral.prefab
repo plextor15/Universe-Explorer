@@ -4948,7 +4948,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5231,7 +5231,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -8745,11 +8745,10 @@ ParticleSystem:
     inside: 0
     outside: 0
     enter: 2
-    exit: 1
+    exit: 0
     colliderQueryMode: 2
     radiusScale: 4
     primitives:
-    - {fileID: 0}
     - {fileID: 0}
   SubModule:
     serializedVersion: 2
@@ -9703,8 +9702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Promien: {fileID: 0}
   DebugMarker: {fileID: 0}
-  moveLock: 0
-  speed: 0
 --- !u!1 &4954668481226306768
 GameObject:
   m_ObjectHideFlags: 0
@@ -9749,7 +9746,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: 0
   m_Mesh: {fileID: -2432090755550338912, guid: 2c81d6fb8de293848869b521c53ed7c7, type: 3}
 --- !u!1 &5345736772829356335
 GameObject:
@@ -9826,7 +9823,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -10109,7 +10106,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -13623,11 +13620,10 @@ ParticleSystem:
     inside: 0
     outside: 0
     enter: 2
-    exit: 1
+    exit: 0
     colliderQueryMode: 2
     radiusScale: 4
     primitives:
-    - {fileID: 0}
     - {fileID: 0}
   SubModule:
     serializedVersion: 2
@@ -14581,8 +14577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Promien: {fileID: 0}
   DebugMarker: {fileID: 0}
-  moveLock: 0
-  speed: 0
 --- !u!1 &5500429226481735624
 GameObject:
   m_ObjectHideFlags: 0
