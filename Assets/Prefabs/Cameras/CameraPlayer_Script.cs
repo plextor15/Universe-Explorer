@@ -272,8 +272,6 @@ public class CameraPlayer_Script : MonoBehaviour
             speed = 0;
         }
 
-        //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().speed = speed;
-
         Speed_UI.text = speed.ToString() + " units / s";
 
     }

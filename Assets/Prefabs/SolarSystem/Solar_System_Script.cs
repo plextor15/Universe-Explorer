@@ -72,12 +72,6 @@ public class Solar_System_Script : MonoBehaviour
             //curr_planet = Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>();
             SolarSysContent.Add("Planet_" + (planet_index + 1));
         }
-
-        // DEBUG ONLY !!
-        //foreach (string x in SolarSysContent)
-        //{
-        //    Debug.Log(x);
-        //}
     }
 
     public void ZniszczSolarSys()

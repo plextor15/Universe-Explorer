@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Stars_Particles_Spiral_Script : MonoBehaviour
 {
+    public GameObject Player;
     public GameObject Promien;
 
     ParticleSystem.Particle p;
@@ -28,7 +29,7 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             TrigModule = true;
         }
@@ -58,17 +59,23 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
                 return;
             }
 
+            if (numEnter != 0) //gdziekolwiek jest, przechodzi na Layer.Stars
+            {
+                Debug.Log("-- przechodzi na Layer.Stars --");
+                Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
+            }
+
             CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position = enter[0].position;
             CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = transform.TransformPoint(CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position);
             CameraStars.GetComponent<CameraStars_Script>().WDrodze = true;
         }
     }
 
-    void OnParticleCollision(GameObject other)
-    {
-        if (other.tag == "Player")
-            Debug.Log(other.tag);
-    }
+    //void OnParticleCollision(GameObject other)
+    //{
+    //    if (other.tag == "Player")
+    //        Debug.Log(other.tag);
+    //}
 
 
     public void Star_Reset() 

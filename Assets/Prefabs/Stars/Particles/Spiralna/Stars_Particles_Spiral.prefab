@@ -4953,7 +4953,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.35
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -9700,8 +9700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f341f6b48c990614991dbe1e4ab54d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   Promien: {fileID: 0}
-  DebugMarker: {fileID: 0}
+  CameraStars: {fileID: 0}
+  TrigModule: 0
 --- !u!1 &4954668481226306768
 GameObject:
   m_ObjectHideFlags: 0
@@ -9828,7 +9830,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.35
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -14575,8 +14577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f341f6b48c990614991dbe1e4ab54d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   Promien: {fileID: 0}
-  DebugMarker: {fileID: 0}
+  CameraStars: {fileID: 0}
+  TrigModule: 0
 --- !u!1 &5500429226481735624
 GameObject:
   m_ObjectHideFlags: 0
@@ -24324,7 +24328,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.12
+  m_MinParticleSize: 0.1
   m_MaxParticleSize: 4.08
   m_CameraVelocityScale: 0
   m_VelocityScale: 0

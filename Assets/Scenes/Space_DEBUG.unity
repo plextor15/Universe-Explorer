@@ -695,6 +695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7415413752612834171, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 7415413752612834171, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
       propertyPath: Promien
       value: 
       objectReference: {fileID: 745845032}
@@ -708,6 +713,11 @@ PrefabInstance:
       propertyPath: DebugMarker
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7490374486296711171, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
     - target: {fileID: 7490374486296711171, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: Promien
@@ -823,6 +833,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063546097}
     m_Modifications:
+    - target: {fileID: -1236121211693417528, guid: 9d43affc3d216694292268223e9ad3ba,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
     - target: {fileID: -1236121211693417528, guid: 9d43affc3d216694292268223e9ad3ba,
         type: 3}
       propertyPath: m_Enabled

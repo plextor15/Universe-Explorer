@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
+//using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using static CameraPlayer_Script;
 
@@ -21,7 +21,7 @@ public class CameraStars_Script : MonoBehaviour
 
     void Update()
     {
-        if (CzyWarstwaStars) //jesli aktuanie w Layer.Stars
+        if (Player.GetComponent<CameraPlayer_Script>().currentLayer != CameraPlayer_Script.Warstwy.Galaxy) //jesli aktuanie w Layer.Stars
         {
             if (Input.GetKey(KeyCode.Space))
             {
