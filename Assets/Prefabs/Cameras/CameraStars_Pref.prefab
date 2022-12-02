@@ -182,7 +182,6 @@ MonoBehaviour:
   CzyWarstwaStars: 0
   Player: {fileID: 0}
   Promien: {fileID: 1296627387696613421}
-  DebugMarker: {fileID: 3086445553393364442}
   DoceloweMiejsce: {x: 0, y: 0, z: 0}
   WDrodze: 0
 --- !u!20 &2881812673409987381
@@ -335,6 +334,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Marker
       objectReference: {fileID: 0}
+    - target: {fileID: 4119635952013823276, guid: 9e774f9faea35744ea41dfcac3d80c2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4285778844539415804, guid: 9e774f9faea35744ea41dfcac3d80c2b,
         type: 3}
       propertyPath: m_RootOrder
@@ -395,12 +399,6 @@ PrefabInstance:
 --- !u!4 &2919607804950596618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4285778844539415804, guid: 9e774f9faea35744ea41dfcac3d80c2b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1440768093741523190}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3086445553393364442 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4119635952013823276, guid: 9e774f9faea35744ea41dfcac3d80c2b,
     type: 3}
   m_PrefabInstance: {fileID: 1440768093741523190}
   m_PrefabAsset: {fileID: 0}

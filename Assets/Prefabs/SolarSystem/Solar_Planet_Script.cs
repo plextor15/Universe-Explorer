@@ -14,11 +14,13 @@ public class Solar_Planet_Script : MonoBehaviour
 
     public int segments_number = 360;
     
-    public void Ustawianie(int i, float r, float a)
+    public void Ustawianie(int i, float r, float a, float tiltX=0, float tiltZ=0)
     {
         this.index = i;
         this.radius = r;
         this.angle = a;
+
+        this.transform.rotation = Quaternion.Euler(tiltX, 0, tiltZ);
     }
 
     void Start()
@@ -53,23 +55,4 @@ public class Solar_Planet_Script : MonoBehaviour
     {
         
     }
-
-    //void CreateOrbit()
-    //{
-    //    float x;
-    //    float y = 0f;
-    //    float z;
-    //    float angle = 20f;
-    //    int points_number = segments_number + 1;
-
-    //    for (int i = 0; i < segments_number; i++)
-    //    {
-    //        x = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
-    //        z = Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
-
-    //        GetComponent<LineRenderer>().SetPosition(i, new Vector3(x, y, z));
-
-    //        angle += (360f / segments_number);
-    //    }
-    //}
 }

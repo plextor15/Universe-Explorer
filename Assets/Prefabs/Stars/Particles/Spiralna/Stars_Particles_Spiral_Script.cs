@@ -65,8 +65,9 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
                 Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
             }
 
-            CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position = enter[0].position;
-            CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = transform.TransformPoint(CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position);
+            //CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position = enter[0].position;
+            //CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = transform.TransformPoint(CameraStars.GetComponent<CameraStars_Script>().DebugMarker.transform.position);
+            CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = enter[0].position;
             CameraStars.GetComponent<CameraStars_Script>().WDrodze = true;
         }
     }

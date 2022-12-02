@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2392532338359352367
+--- !u!1 &7741862122909614687
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1115489964538935756}
-  - component: {fileID: 8458619166617812672}
+  - component: {fileID: 859176127518978098}
+  - component: {fileID: 2068275807581906954}
   m_Layer: 0
   m_Name: NoStars
   m_TagString: NoStars
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1115489964538935756
+  m_IsActive: 1
+--- !u!4 &859176127518978098
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2392532338359352367}
+  m_GameObject: {fileID: 7741862122909614687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 110, y: 45.3, z: 110}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8498279832492676705}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8458619166617812672
-MeshCollider:
+--- !u!135 &2068275807581906954
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2392532338359352367}
+  m_GameObject: {fileID: 7741862122909614687}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 26
-  m_Mesh: {fileID: -2432090755550338912, guid: 2c81d6fb8de293848869b521c53ed7c7, type: 3}
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8375611300680083741
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +56,7 @@ GameObject:
   - component: {fileID: 7662959357202558864}
   - component: {fileID: 8883799647947937411}
   m_Layer: 25
-  m_Name: Spiral_galaxy Sprite
+  m_Name: Spiral_Galaxy_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 8375611300680083741}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8498279832492676705}
@@ -119,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7cd6902210ea2a743bdcca4b6cac5210, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f69c699d3cd6b514eb1b4598eabc690f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.38431373}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8498279832492676705}
   m_Layer: 25
-  m_Name: GalaxyDEBUG_Pref
+  m_Name: GalaxySpiral_Pref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7662959357202558864}
-  - {fileID: 1115489964538935756}
+  - {fileID: 859176127518978098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

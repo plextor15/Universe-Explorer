@@ -80,14 +80,12 @@ public class CameraPlayer_Script : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             this.transform.Rotate(Vector3.forward, -roll_rate * Time.deltaTime, Space.Self);
-
-            RotKamer();//ustawianie rotacji wszystkich kamer
+            RotKamer(); //ustawianie rotacji wszystkich kamer
         }
         if (Input.GetKey(KeyCode.Q))
         {
             this.transform.Rotate(Vector3.forward, roll_rate * Time.deltaTime, Space.Self);
-
-            RotKamer();//ustawianie rotacji wszystkich kamer
+            RotKamer(); //ustawianie rotacji wszystkich kamer
         }
 
         
@@ -164,8 +162,7 @@ public class CameraPlayer_Script : MonoBehaviour
         }
         if (currentLayer == Warstwy.Stars)
         {
-            //Camera_Galaxy.transform.Translate(kierunek * speed * Time.deltaTime / 10000, Space.Self);
-            //Camera_Stars.transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+            Camera_Galaxy.transform.Translate((kierunek * speed * Time.deltaTime)/100, Space.Self);
             Camera_Stars.transform.Translate(kierunek * speed * Time.deltaTime, Space.Self);
         }
         if (currentLayer == Warstwy.SolarSys)
@@ -186,8 +183,8 @@ public class CameraPlayer_Script : MonoBehaviour
             currentLayer = Warstwy.CelestialBody;
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
+            Prefab_CelestialBdoy.SetActive(true);
 
-            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
@@ -202,6 +199,7 @@ public class CameraPlayer_Script : MonoBehaviour
             previousLayer = currentLayer;
             currentLayer = Warstwy.SolarSys;
 
+            Prefab_CelestialBdoy.SetActive(false);
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
 
@@ -235,6 +233,7 @@ public class CameraPlayer_Script : MonoBehaviour
             currentLayer = Warstwy.Stars;
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = true;
+            Prefab_CelestialBdoy.SetActive(false);
 
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = false;
             Debug.Log("Warstwa: " + currentLayer);
@@ -252,6 +251,7 @@ public class CameraPlayer_Script : MonoBehaviour
             currentLayer = Warstwy.Galaxy;
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
+            Prefab_CelestialBdoy.SetActive(false);
 
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
@@ -273,30 +273,29 @@ public class CameraPlayer_Script : MonoBehaviour
         }
 
         Speed_UI.text = speed.ToString() + " units / s";
-
     }
 
     void DebugKeys()
     {
         //  Warstwy manualne przechodzenie (numery jak w enum) ----- DEBUG ONLY!!
-        if (Input.GetKey("1")) Zmiana_Warswy(Warstwy.CelestialBody);
-        if (Input.GetKey("2")) Zmiana_Warswy(Warstwy.SolarSys);
-        if (Input.GetKey("3")) Zmiana_Warswy(Warstwy.Stars);
-        if (Input.GetKey("4")) Zmiana_Warswy(Warstwy.Galaxy);
+        if (Input.GetKeyDown("1")) Zmiana_Warswy(Warstwy.CelestialBody);
+        if (Input.GetKeyDown("2")) Zmiana_Warswy(Warstwy.SolarSys);
+        if (Input.GetKeyDown("3")) Zmiana_Warswy(Warstwy.Stars);
+        if (Input.GetKeyDown("4")) Zmiana_Warswy(Warstwy.Galaxy);
 
-        if (Input.GetKey("5")) // destroy & exit solar sys
+        if (Input.GetKeyDown("5")) // destroy & exit solar sys
         {
             Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
             Zmiana_Warswy(Warstwy.Stars);
         }
 
-        if (Input.GetKey("6")) // destroy & create solar sys
+        if (Input.GetKeyDown("6")) // destroy & create solar sys
         {
             Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
             Prefab_SolarSys.GetComponent<Solar_System_Script>().NowySolarSys();
             Zmiana_Warswy(Warstwy.SolarSys);
         }
         
-        if (Input.GetKey("0")) Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().Star_Reset();
+        //if (Input.GetKeyDown("0")) 
     }
 }

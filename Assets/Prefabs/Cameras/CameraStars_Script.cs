@@ -10,7 +10,7 @@ public class CameraStars_Script : MonoBehaviour
     public GameObject Player;
 
     public GameObject Promien;
-    public GameObject DebugMarker;
+    //public GameObject DebugMarker;
     
     public Vector3 DoceloweMiejsce = Vector3.zero;
     public bool WDrodze = false;
@@ -25,14 +25,14 @@ public class CameraStars_Script : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("Star Level Ray Shoot");
-                DebugMarker.SetActive(true);
+                //Debug.Log("Star Level Ray Shoot");
+                //DebugMarker.SetActive(true);
                 Raying(true);
             }
             else
             {
                 Raying(false);
-                DebugMarker.SetActive(false);
+                //DebugMarker.SetActive(false);
             }
         }
 
