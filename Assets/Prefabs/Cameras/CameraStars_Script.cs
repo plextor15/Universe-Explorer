@@ -14,6 +14,8 @@ public class CameraStars_Script : MonoBehaviour
     
     public Vector3 DoceloweMiejsce = Vector3.zero;
     public bool WDrodze = false;
+    public float MaxDistDelta = 1.0f;
+    public float CzasDoCelu = 1.5f;
 
     void Start()
     {
@@ -45,7 +47,7 @@ public class CameraStars_Script : MonoBehaviour
 
             if (this.transform.position != DoceloweMiejsce)
             {
-                this.transform.position = Vector3.MoveTowards(transform.position, DoceloweMiejsce, 1.0f);
+                this.transform.position = Vector3.MoveTowards(transform.position, DoceloweMiejsce, MaxDistDelta * Time.deltaTime);
             }
 
             if (this.transform.position == DoceloweMiejsce)

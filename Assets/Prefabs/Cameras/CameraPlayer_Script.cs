@@ -184,6 +184,7 @@ public class CameraPlayer_Script : MonoBehaviour
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
             Prefab_CelestialBdoy.SetActive(true);
+            Prefab_CelestialBdoy.transform.localScale = Vector3.one;
 
             Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
@@ -200,6 +201,7 @@ public class CameraPlayer_Script : MonoBehaviour
             currentLayer = Warstwy.SolarSys;
 
             Prefab_CelestialBdoy.SetActive(false);
+            Prefab_CelestialBdoy.transform.localScale = Vector3.zero;
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             Debug.Log("Warstwa: " + currentLayer);
 
@@ -223,11 +225,12 @@ public class CameraPlayer_Script : MonoBehaviour
 
         if (w == Warstwy.Stars)
         {
-            //if (currentLayer == Warstwy.Galaxy)
-            //{
-            //    Stars.GetComponent<ParticleSystem>().Clear();
-            //    Stars.GetComponent<ParticleSystem>().Play();
-            //}
+            if (currentLayer == Warstwy.Galaxy)
+            {
+                //Stars.GetComponent<ParticleSystem>().Clear();
+                //Stars.GetComponent<ParticleSystem>().Play();
+                Camera_Stars.transform.position = new Vector3(Camera_Galaxy.transform.position.x * 100f, Camera_Galaxy.transform.position.y * 100f, Camera_Galaxy.transform.position.z * 100f);
+            }
 
             previousLayer = currentLayer;
             currentLayer = Warstwy.Stars;
