@@ -32,7 +32,7 @@ public class CameraSol_Script : MonoBehaviour
     {
         if (other.tag == "ToPlanet")
         {
-            Debug.Log("ToPlanet");
+            //Debug.Log("ToPlanet");
             transform.position = other.transform.position;
             Planet.transform.rotation = other.transform.rotation;
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.CelestialBody);
@@ -43,7 +43,7 @@ public class CameraSol_Script : MonoBehaviour
     { 
         if (other.tag == "OutOfSol") 
         {
-            Debug.Log("OutOfSol");
+            //Debug.Log("OutOfSol");
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
         }
     }

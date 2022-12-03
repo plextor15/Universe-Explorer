@@ -20,7 +20,7 @@ public class CameraCelestial_Script : MonoBehaviour
     {
         if (other.tag == "OutOfCelestial")
         {
-            Debug.Log("OutOfCelestial");
+            //Debug.Log("OutOfCelestial");
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.SolarSys);
         }
     }

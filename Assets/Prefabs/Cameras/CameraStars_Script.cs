@@ -10,7 +10,6 @@ public class CameraStars_Script : MonoBehaviour
     public GameObject Player;
 
     public GameObject Promien;
-    //public GameObject DebugMarker;
     
     public Vector3 DoceloweMiejsce = Vector3.zero;
     public bool WDrodze = false;
@@ -60,7 +59,7 @@ public class CameraStars_Script : MonoBehaviour
 
     public void Raying(bool x)
     {
-        Debug.Log("Raying(): " + x);
+        //Debug.Log("Raying(): " + x);
 
         if (x)
         {

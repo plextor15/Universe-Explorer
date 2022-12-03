@@ -186,7 +186,7 @@ public class CameraPlayer_Script : MonoBehaviour
             Prefab_CelestialBdoy.SetActive(true);
             Prefab_CelestialBdoy.transform.localScale = Vector3.one;
 
-            Debug.Log("Warstwa: " + currentLayer);
+            //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
             Camera_Sol.GetComponent<Camera>().enabled = true;
@@ -203,7 +203,7 @@ public class CameraPlayer_Script : MonoBehaviour
             Prefab_CelestialBdoy.SetActive(false);
             Prefab_CelestialBdoy.transform.localScale = Vector3.zero;
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
-            Debug.Log("Warstwa: " + currentLayer);
+            //Debug.Log("Warstwa: " + currentLayer);
 
             //Camera_Sol skierowana na gwiazde i w odpowiedniej odleglosci
             if (previousLayer != Warstwy.CelestialBody)
@@ -239,7 +239,7 @@ public class CameraPlayer_Script : MonoBehaviour
             Prefab_CelestialBdoy.SetActive(false);
 
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = false;
-            Debug.Log("Warstwa: " + currentLayer);
+            //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
             Camera_Sol.GetComponent<Camera>().enabled = false;
@@ -257,7 +257,7 @@ public class CameraPlayer_Script : MonoBehaviour
             Prefab_CelestialBdoy.SetActive(false);
 
             //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
-            Debug.Log("Warstwa: " + currentLayer);
+            //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = false;
             Camera_Sol.GetComponent<Camera>().enabled = false;
@@ -275,11 +275,24 @@ public class CameraPlayer_Script : MonoBehaviour
             speed = 0;
         }
 
-        Speed_UI.text = speed.ToString() + " units / s";
+        //Speed_UI.text = speed.ToString() + " units / s";
+    }
+
+    public void SliderSetSpeed(float x)
+    {
+        Speed_UI.text = speed.ToString() + " units / s"; //DEBUG ONLY!!
+
+        int w = (int)x;
+        float s = x - w;
+
+        //Debug.Log("Warstwa - "+w+", s = "+s);
     }
 
     void DebugKeys()
     {
+        //QUIT
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+
         //  Warstwy manualne przechodzenie (numery jak w enum) ----- DEBUG ONLY!!
         if (Input.GetKeyDown("1")) Zmiana_Warswy(Warstwy.CelestialBody);
         if (Input.GetKeyDown("2")) Zmiana_Warswy(Warstwy.SolarSys);

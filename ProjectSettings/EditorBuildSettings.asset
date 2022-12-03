@@ -7,5 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Space.unity
-    guid: d52991e66222d5644a018e1ae339c407
+    guid: f32ee20cbdb78ee4fbebacb10279c1c4
   m_configObjects: {}

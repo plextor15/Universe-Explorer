@@ -25,7 +25,7 @@ public class CameraGalaxy_Script : MonoBehaviour
     {
         if (other.tag == "NoStars" && Player.GetComponent<CameraPlayer_Script>().currentLayer == CameraPlayer_Script.Warstwy.Galaxy)
         {
-            Debug.Log("Stars");
+            //Debug.Log("Stars");
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
             Player.GetComponent<CameraPlayer_Script>().speed *= 100f;
         }
@@ -35,7 +35,7 @@ public class CameraGalaxy_Script : MonoBehaviour
     {
         if (other.tag == "NoStars")
         {
-            Debug.Log("No Stars");
+            //Debug.Log("No Stars");
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Galaxy);
             //Player.GetComponent<CameraPlayer_Script>().Stars_Pref.GetComponent<ParticleSystem>().Clear();
             Player.GetComponent<CameraPlayer_Script>().speed /= 100f;

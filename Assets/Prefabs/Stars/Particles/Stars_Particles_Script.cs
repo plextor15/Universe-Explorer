@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stars_Particles_Spiral_Script : MonoBehaviour
+public class Stars_Particles_Script : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Promien;
 
-    ParticleSystem.Particle p;
+    //ParticleSystem.Particle p;
     private ParticleSystem ps;
     List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
 
@@ -22,9 +22,9 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("-- Testowe OnEnable() --");
+        //Debug.Log("-- Testowe OnEnable() --");
         ps = GetComponent<ParticleSystem>();
-        Debug.Log(ps);
+        //Debug.Log(ps);
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
     {
         if (TrigModule)
         {
-            Debug.Log("-- ParticleTrigger() --");
+            //Debug.Log("-- ParticleTrigger() --");
 
             if (ps == null)
             {
@@ -61,7 +61,7 @@ public class Stars_Particles_Spiral_Script : MonoBehaviour
 
             if (numEnter != 0) //gdziekolwiek jest, przechodzi na Layer.Stars
             {
-                Debug.Log("-- przechodzi na Layer.Stars --");
+                //Debug.Log("-- przechodzi na Layer.Stars --");
                 Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
             }
 
