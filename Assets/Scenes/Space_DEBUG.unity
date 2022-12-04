@@ -280,10 +280,35 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6288201403690911867, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 6288201403690911867, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: SliderGameObject
+      value: 
+      objectReference: {fileID: 2008185010}
     - target: {fileID: 6605225534013182677, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381164744116844935, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 7381164744116844935, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: SliderComponent
+      value: 
+      objectReference: {fileID: 109913284}
+    - target: {fileID: 8106134635870861006, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_Value
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 8106134635870861006, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
@@ -328,6 +353,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 109913282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &109913284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8106134635870861006, guid: 5b9d7919d117c1744a3e48af47727dbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 109913282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008185010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &188926379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1833,6 +1870,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2008185010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2376458127162714739, guid: 5b9d7919d117c1744a3e48af47727dbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 109913282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2030068744 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884279438063636956, guid: 5b9d7919d117c1744a3e48af47727dbe,
