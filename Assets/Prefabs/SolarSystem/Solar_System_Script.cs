@@ -10,7 +10,7 @@ public class Solar_System_Script : MonoBehaviour
     public int public_planet_number;
     private int planet_number;
 
-    public float minRange = 0.2f;
+    public float minRange = 0.5f;
     public float maxRange = 50f;
     private float minTheta = 0.0f;   //const, nie dotykac
     private float maxTheta = 360.0f; //const, nie dotykac

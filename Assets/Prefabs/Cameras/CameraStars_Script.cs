@@ -26,14 +26,11 @@ public class CameraStars_Script : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                //Debug.Log("Star Level Ray Shoot");
-                //DebugMarker.SetActive(true);
                 Raying(true);
             }
             else
             {
                 Raying(false);
-                //DebugMarker.SetActive(false);
             }
         }
 
@@ -59,8 +56,6 @@ public class CameraStars_Script : MonoBehaviour
 
     public void Raying(bool x)
     {
-        //Debug.Log("Raying(): " + x);
-
         if (x)
         {
             Promien.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);

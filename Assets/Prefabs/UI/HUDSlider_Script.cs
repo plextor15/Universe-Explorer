@@ -8,6 +8,7 @@ public class HUDSlider_Script : MonoBehaviour
 {
     public GameObject Player;
     public Slider SliderComponent;
+    public float SliderValue;
 
     private float PoprzedniFrame;
     private int warst = 0;
@@ -19,6 +20,8 @@ public class HUDSlider_Script : MonoBehaviour
 
     void Update()
     {
+        SliderValue= SliderComponent.value;
+
         if (Input.GetKey("r")) //reset speed
         {
             SliderComponent.value = warst;
@@ -28,7 +31,7 @@ public class HUDSlider_Script : MonoBehaviour
         {
             warst = (int)Player.GetComponent<CameraPlayer_Script>().currentLayer;
             warst = warst - 1;
-            Debug.Log("-- warstw: "+warst);
+            //Debug.Log("-- warstw: "+warst);
 
             if (SliderComponent.value < warst) //nie mozna wejsc do warstwy ponizej
             {

@@ -24,11 +24,12 @@ public class CameraPlayer_Script : MonoBehaviour
 
     //Prefaby od warstw
     //public GameObject Prefab_Galaxy;
-    //public GameObject Prefab_Stars;
+    public GameObject Prefab_SpiralStars;
+    public GameObject Prefab_EliptStars;
     public GameObject Prefab_SolarSys;
     public GameObject Prefab_CelestialBdoy;
 
-
+    
     public float sensitivity;
     public float roll_rate;
 
@@ -42,10 +43,11 @@ public class CameraPlayer_Script : MonoBehaviour
     public float speed;
     public float multipl = 1.2f;
     public float multiplBoost = 1000f;
-    public GameObject Stars_Pref;
+    //public GameObject Stars_Pref;
 
     //UI
     public GameObject HUD;
+    //public Slider SliderComponent;
     public Text Speed_UI;
     private string SpeedJednostki = " unit/s";
     public Text Warstwa_UI;
@@ -57,6 +59,7 @@ public class CameraPlayer_Script : MonoBehaviour
     {
         RotKamer();//ustawianie rotacji wszystkich kamer
         Zmiana_Warswy(Warstwy.SolarSys);
+
         SliderSetSpeed(1.25f);
     }
 
@@ -92,19 +95,22 @@ public class CameraPlayer_Script : MonoBehaviour
             RotKamer(); //ustawianie rotacji wszystkich kamer
         }
 
-        
+        //
+        //      !!! PREDKOSC TYLKO ZA POMOCA SLIDERA !!!
+        //
         //Speed
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            ChangeSpeed(Input.mouseScrollDelta.y * multipl * multiplBoost);
-        }
-        else
-        {
-            ChangeSpeed(Input.mouseScrollDelta.y * multipl);
-        }
+        //if (Input.GetKey(KeyCode.LeftShift))
+        //{
+        //    ChangeSpeed(Input.mouseScrollDelta.y * multipl * multiplBoost);
+        //}
+        //else
+        //{
+        //    ChangeSpeed(Input.mouseScrollDelta.y * multipl);
+        //}
 
 
         //WSAD
+        //float sliderVal = SliderComponent.value; //w Unity WASD zmienia slider automatycznie
 
         //zmiana warstwy z Speed Slidera
         if (pendingLayer)
@@ -137,7 +143,13 @@ public class CameraPlayer_Script : MonoBehaviour
             TranslateKamer(Vector3.left);
         }
 
+        //SliderComponent.value = sliderVal;
+
         //Funkcyjne
+
+        //
+        //      !!! PREDKOSC TYLKO ZA POMOCA SLIDERA !!!
+        //
         //if (Input.GetKey("r")) //reset speed jest w Sliderze od predkosci
         //{
         //    ChangeSpeed(Mathf.NegativeInfinity);
@@ -223,8 +235,6 @@ public class CameraPlayer_Script : MonoBehaviour
 
             Prefab_CelestialBdoy.SetActive(false);
             Prefab_CelestialBdoy.transform.localScale = Vector3.zero;
-            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
-            //Debug.Log("Warstwa: " + currentLayer);
 
             //Camera_Sol skierowana na gwiazde i w odpowiedniej odleglosci
             if (previousLayer != Warstwy.CelestialBody)
@@ -246,12 +256,13 @@ public class CameraPlayer_Script : MonoBehaviour
 
         if (w == Warstwy.Stars)
         {
-            if (currentLayer == Warstwy.Galaxy)
-            {
-                //Stars.GetComponent<ParticleSystem>().Clear();
-                //Stars.GetComponent<ParticleSystem>().Play();
-                Camera_Stars.transform.position = new Vector3(Camera_Galaxy.transform.position.x * 100f, Camera_Galaxy.transform.position.y * 100f, Camera_Galaxy.transform.position.z * 100f);
-            }
+            // TO JEST ROBIONE W SPIRAL/ELIPT_PARTICLE?SCRIPT
+            //if (currentLayer == Warstwy.Galaxy)
+            //{
+            //    Camera_Stars.transform.position = new Vector3(  Camera_Galaxy.transform.position.x * 100f, 
+            //                                                    Camera_Galaxy.transform.position.y * 100f, 
+            //                                                    Camera_Galaxy.transform.position.z * 100f);
+            //}
 
             previousLayer = currentLayer;
             currentLayer = Warstwy.Stars;
@@ -259,7 +270,6 @@ public class CameraPlayer_Script : MonoBehaviour
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = true;
             Prefab_CelestialBdoy.SetActive(false);
 
-            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = false;
             //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
@@ -277,7 +287,6 @@ public class CameraPlayer_Script : MonoBehaviour
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
             Prefab_CelestialBdoy.SetActive(false);
 
-            //Stars_Pref.GetComponent<Stars_Particles_Spiral_Script>().moveLock = true;
             //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = false;
@@ -288,25 +297,25 @@ public class CameraPlayer_Script : MonoBehaviour
         }
     }
 
-    public void ChangeSpeed(float deltaSpeed) 
-    {
-        this.speed = this.speed + deltaSpeed;
-        if (speed < 0)
-        {
-            speed = 0;
-        }
-
-        Speed_UI.text = speed.ToString() + SpeedJednostki;
-    }
+    //
+    //      !!! PREDKOSC TYLKO ZA POMOCA SLIDERA !!!
+    //
+    //public void ChangeSpeed(float deltaSpeed) 
+    //{
+    //    this.speed = this.speed + deltaSpeed;
+    //    if (speed < 0)
+    //    {
+    //        speed = 0;
+    //    }
+    //    Speed_UI.text = speed.ToString() + SpeedJednostki;
+    //}
 
     public void SliderSetSpeed(float x)
     {
         //Warstwy DocelowaWarstwa = Warstwy.None;
-        //Speed_UI.text = speed.ToString() + " units / s"; //DEBUG ONLY!!
-
+        
         int w = (int)x;
         float s = x - w;
-
         //Debug.Log("Warstwa - "+w+", s = "+s);
 
         //jednostki sa tylko jako DEBUG!!
@@ -344,7 +353,7 @@ public class CameraPlayer_Script : MonoBehaviour
             default: break;
         }
 
-        Speed_UI.text = speed.ToString() + SpeedJednostki;
+        Speed_UI.text = speed.ToString("0.00") + SpeedJednostki;
         if (currentLayer != odSlidera)
         {
             if ((int)currentLayer < (int)odSlidera)
@@ -357,7 +366,6 @@ public class CameraPlayer_Script : MonoBehaviour
         {
             pendingLayer = false;
         }
-        
     }
 
     void DebugKeys()
