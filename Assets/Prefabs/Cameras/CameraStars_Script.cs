@@ -65,4 +65,12 @@ public class CameraStars_Script : MonoBehaviour
             Promien.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "NoStars")
+        {
+            Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Galaxy);
+        }
+    }
 }

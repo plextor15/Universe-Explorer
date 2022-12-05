@@ -65,9 +65,10 @@ public class Stars_Particles_Script : MonoBehaviour
                 Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
             }
 
-            float dist = Vector3.Distance(CameraStars.transform.position, enter[0].position);
+            Vector3 partic_pos = transform.TransformPoint(enter[0].position);
+            float dist = Vector3.Distance(CameraStars.transform.position, partic_pos);
             CameraStars.GetComponent<CameraStars_Script>().MaxDistDelta = dist / CameraStars.GetComponent<CameraStars_Script>().CzasDoCelu;
-            CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = enter[0].position;
+            CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = partic_pos;
             CameraStars.GetComponent<CameraStars_Script>().WDrodze = true;
         }
     }

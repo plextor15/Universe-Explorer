@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
+//using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
@@ -23,7 +23,9 @@ public class Spiral_Particle_Script : MonoBehaviour
 
     void Start()
     {
-        
+        //Na start ustawiane odpowiednio
+        Player.GetComponent<CameraPlayer_Script>().Prefab_EliptStars.SetActive(false);
+        Player.GetComponent<CameraPlayer_Script>().Prefab_SpiralStars.SetActive(true);
     }
     void Update()
     {
@@ -51,17 +53,17 @@ public class Spiral_Particle_Script : MonoBehaviour
             Spiralna.SetActive(true);
             Spiralna.transform.rotation = Quaternion.Euler(enter[0].rotation3D);
 
-            // OLD Prawie Dziala
-            //Kamera_Stars.transform.position = Vector3.zero;
-            //Kamera_Stars.transform.rotation = Kamera_Galaxy.transform.rotation;
-            //Kamera_Stars.transform.Translate(Vector3.back * 700f, Space.Self);   // tyle co granica zmiany warstwy
-            //Kamera_Stars.transform.rotation = Kamera_Galaxy.transform.rotation;
-
-            Kamera_Stars.transform.position = Kamera_Galaxy.transform.InverseTransformPoint(enter[0].position);
-            Kamera_Stars.transform.position *= 10f;
+            //dziala
+            var TMP = Kamera_Galaxy.transform.rotation;
+            Kamera_Stars.transform.position = Vector3.zero;
+            Kamera_Galaxy.transform.LookAt(enter[0].position);
             Kamera_Stars.transform.rotation = Kamera_Galaxy.transform.rotation;
+            Kamera_Stars.transform.Translate(Vector3.back * (Vector3.Distance(Kamera_Galaxy.transform.position, enter[0].position) * 100f), Space.Self);   // tyle co granica zmiany warstwy
+            Kamera_Stars.transform.rotation = TMP;
+            Kamera_Galaxy.transform.rotation = TMP;
 
-            Player.GetComponent<CameraPlayer_Script>().Prefab_EliptStars.SetActive(false); //tak zeby nie bylo, ze nadal jest active
+            Player.GetComponent<CameraPlayer_Script>().Prefab_EliptStars.SetActive(false); //tak zeby nie bylo
+            Player.GetComponent<CameraPlayer_Script>().Prefab_SpiralStars.SetActive(true); //tak zeby nie bylo
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
         }
 

@@ -47,16 +47,24 @@ public class Solar_System_Script : MonoBehaviour
         SolarSysContent.Add("Solar_Star_Pref(Clone)");
 
         // Planety
-        if (random_planets_number) { planet_number = (int)Random.Range(0, public_planet_number); }
-        else { planet_number = public_planet_number; }
+        if (random_planets_number) 
+        { 
+            planet_number = (int)Random.Range(0, public_planet_number); 
+        }
+        else 
+        { 
+            planet_number = public_planet_number; 
+        }
 
         if (planet_number == 0)
         {
             NieMaPlanet = true;
             return;  //bo nie ma co stworzyc
         }
-        else { NieMaPlanet = false; }
-
+        else 
+        { 
+            NieMaPlanet = false; 
+        }
         
         List<OrbitParams> orbityList = new List<OrbitParams>();
         //OrbitParams current_orbit;

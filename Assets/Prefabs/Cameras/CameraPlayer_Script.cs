@@ -47,7 +47,7 @@ public class CameraPlayer_Script : MonoBehaviour
 
     //UI
     public GameObject HUD;
-    //public Slider SliderComponent;
+    public Slider SliderComponent;
     public Text Speed_UI;
     private string SpeedJednostki = " unit/s";
     public Text Warstwa_UI;
@@ -242,6 +242,10 @@ public class CameraPlayer_Script : MonoBehaviour
                 Camera_Sol.transform.position = Vector3.zero;
                 Camera_Sol.transform.rotation = Camera_Stars.transform.rotation;
                 Camera_Sol.transform.Translate(Vector3.back * 10, Space.Self);
+
+                //Niszczenie+Tworzenie SolarSys
+                Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
+                Prefab_SolarSys.GetComponent<Solar_System_Script>().NowySolarSys();
             }
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
@@ -256,7 +260,7 @@ public class CameraPlayer_Script : MonoBehaviour
 
         if (w == Warstwy.Stars)
         {
-            // TO JEST ROBIONE W SPIRAL/ELIPT_PARTICLE?SCRIPT
+            // TO JEST ROBIONE W SPIRAL/ELIPT_PARTICLE_SCRIPT
             //if (currentLayer == Warstwy.Galaxy)
             //{
             //    Camera_Stars.transform.position = new Vector3(  Camera_Galaxy.transform.position.x * 100f, 
