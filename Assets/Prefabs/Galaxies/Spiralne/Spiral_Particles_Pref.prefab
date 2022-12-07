@@ -1101,7 +1101,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
       cycleCount: 1
-      repeatInterval: 0.1
+      repeatInterval: 0.01
       probability: 1
   SizeModule:
     enabled: 0
@@ -4885,3 +4885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecbf1b52c87c54469ff037ca13d608f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  Kamera_Stars: {fileID: 0}
+  Kamera_Galaxy: {fileID: 0}
+  Spiralna: {fileID: 0}

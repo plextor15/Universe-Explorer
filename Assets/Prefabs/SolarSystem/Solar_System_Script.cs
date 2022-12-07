@@ -19,11 +19,10 @@ public class Solar_System_Script : MonoBehaviour
 
     public GameObject planet;
     public int bodies_number;
-    private
-        Transform parent_transform;
+    private Transform parent_transform;
     public GameObject parent_gameobject;
 
-    private List<string> SolarSysContent = new List<string>();
+    //private List<string> SolarSysContent = new List<string>();
     public bool NieMaPlanet;
 
     public struct OrbitParams
@@ -77,7 +76,7 @@ public class Solar_System_Script : MonoBehaviour
         if (planet_number == 0)
         {
             //NieMaPlanet = true;
-            return;  //bo nie ma co stworzyc
+            return;
         }
         //else 
         //{ 
@@ -114,7 +113,7 @@ public class Solar_System_Script : MonoBehaviour
 
             //curr_planet = Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>();
             //SolarSysContent.Add("Planet_" + (planet_index + 1));
-            Debug.Log("- Stworzenie: Planet_" + (planet_index + 1));    //DEBUG ONLY!!
+            //Debug.Log("- Stworzenie: Planet_" + (planet_index + 1));    //DEBUG ONLY!!
         }
     }
 

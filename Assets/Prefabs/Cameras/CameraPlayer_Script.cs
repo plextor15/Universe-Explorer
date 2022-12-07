@@ -66,6 +66,8 @@ public class CameraPlayer_Script : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit(); //Wyjscie
+
         Movement();
         DebugKeys();
     }
@@ -221,6 +223,11 @@ public class CameraPlayer_Script : MonoBehaviour
             Prefab_CelestialBdoy.SetActive(true);
             Prefab_CelestialBdoy.transform.localScale = Vector3.one;
 
+            //Wycentrowanie
+            Camera_Body.transform.position = Vector3.zero;
+            Camera_Body.transform.rotation = Camera_Sol.transform.rotation;
+            Camera_Body.transform.Translate(Vector3.back * 40f, Space.Self);
+
             //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
             Camera_Stars.GetComponent<Camera>().enabled = true;
@@ -246,7 +253,7 @@ public class CameraPlayer_Script : MonoBehaviour
             {
                 Camera_Sol.transform.position = Vector3.zero;
                 Camera_Sol.transform.rotation = Camera_Stars.transform.rotation;
-                Camera_Sol.transform.Translate(Vector3.back * 10, Space.Self);
+                Camera_Sol.transform.Translate(Vector3.back * 10f, Space.Self);
 
                 //Niszczenie+Tworzenie SolarSys
                 //Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
@@ -336,8 +343,6 @@ public class CameraPlayer_Script : MonoBehaviour
 
     public void SliderSetSpeed(float x)
     {
-        //Warstwy DocelowaWarstwa = Warstwy.None;
-        
         int w = (int)x;
         float s = x - w;
         //Debug.Log("Warstwa - "+w+", s = "+s);
@@ -393,9 +398,6 @@ public class CameraPlayer_Script : MonoBehaviour
 
     void DebugKeys()
     {
-        //QUIT
-        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
-
         //  Warstwy manualne przechodzenie (numery jak w enum) ----- DEBUG ONLY!!
         if (Input.GetKeyDown("1")) Zmiana_Warswy(Warstwy.CelestialBody);
         if (Input.GetKeyDown("2")) Zmiana_Warswy(Warstwy.SolarSys);
