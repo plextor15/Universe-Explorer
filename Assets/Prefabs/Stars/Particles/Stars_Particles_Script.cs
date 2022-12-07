@@ -80,14 +80,14 @@ public class Stars_Particles_Script : MonoBehaviour
     //}
 
 
-    public void Star_Reset() 
-    { 
-        GetComponent<ParticleSystem>().Clear();
-        GetComponent<ParticleSystem>().Play();
-    }
+    //public void Star_Reset() 
+    //{ 
+    //    GetComponent<ParticleSystem>().Clear();
+    //    GetComponent<ParticleSystem>().Play();
+    //}
 
-    public void NicNieWidac()
-    {
-        GetComponent<ParticleSystem>().Clear();
-    }
+    //public void NicNieWidac()
+    //{
+    //    GetComponent<ParticleSystem>().Clear();
+    //}
 }

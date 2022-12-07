@@ -7,15 +7,18 @@ using UnityEngine.UI;
 public class HUDSlider_Script : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject Znacznik;
     public Slider SliderComponent;
     public float SliderValue;
 
     private float PoprzedniFrame;
     private int warst = 0;
 
+    private RectTransform ZnacznikTransform;
+
     void Start()
     {
-
+        ZnacznikTransform = Znacznik.GetComponent<RectTransform>();
     }
 
     void Update()
@@ -40,6 +43,27 @@ public class HUDSlider_Script : MonoBehaviour
 
             PoprzedniFrame = SliderComponent.value;
         }
+    }
 
+    public void UstawZnacznik(CameraPlayer_Script.Warstwy w) 
+    {
+        Vector3 wektor = new Vector3(ZnacznikTransform.localPosition.x, 0, ZnacznikTransform.localPosition.z);
+
+        switch (w)
+        {
+            case CameraPlayer_Script.Warstwy.CelestialBody:
+                ZnacznikTransform.localPosition = wektor + new Vector3(0,-225f,0);
+                break;
+            case CameraPlayer_Script.Warstwy.SolarSys:
+                ZnacznikTransform.localPosition = wektor + new Vector3(0, -75f, 0);
+                break;
+            case CameraPlayer_Script.Warstwy.Stars:
+                ZnacznikTransform.localPosition = wektor + new Vector3(0, 75f, 0);
+                break;
+            case CameraPlayer_Script.Warstwy.Galaxy:
+                ZnacznikTransform.localPosition = wektor + new Vector3(0, 225f, 0);
+                break;
+            default: break;
+        }
     }
 }

@@ -47,10 +47,11 @@ public class CameraPlayer_Script : MonoBehaviour
 
     //UI
     public GameObject HUD;
+    public GameObject Slider_script;
     public Slider SliderComponent;
     public Text Speed_UI;
     private string SpeedJednostki = " unit/s";
-    public Text Warstwa_UI;
+    public Text Warstwa_UI; //Juz nie uzywane
 
     public GameObject help;
 
@@ -226,7 +227,8 @@ public class CameraPlayer_Script : MonoBehaviour
             Camera_Sol.GetComponent<Camera>().enabled = true;
             Camera_Body.GetComponent<Camera>().enabled = true;
 
-            Warstwa_UI.text = currentLayer.ToString();
+            //Warstwa_UI.text = currentLayer.ToString();
+            Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
             SliderComponent.value = 0.2f;
             SliderSetSpeed(0.2f);
         }
@@ -258,7 +260,8 @@ public class CameraPlayer_Script : MonoBehaviour
             Camera_Sol.GetComponent<Camera>().enabled = true;
             Camera_Body.GetComponent<Camera>().enabled = false;
 
-            Warstwa_UI.text = currentLayer.ToString();
+            //Warstwa_UI.text = currentLayer.ToString();
+            Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
             SliderComponent.value = 1.2f;
             SliderSetSpeed(1.2f);
         }
@@ -291,7 +294,8 @@ public class CameraPlayer_Script : MonoBehaviour
             Camera_Sol.GetComponent<Camera>().enabled = false;
             Camera_Body.GetComponent<Camera>().enabled = false;
 
-            Warstwa_UI.text = currentLayer.ToString();
+            //Warstwa_UI.text = currentLayer.ToString();
+            Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
             SliderComponent.value = 2.20f;
             SliderSetSpeed(2.2f);
         }
@@ -310,7 +314,8 @@ public class CameraPlayer_Script : MonoBehaviour
             Camera_Sol.GetComponent<Camera>().enabled = false;
             Camera_Body.GetComponent<Camera>().enabled = false;
 
-            Warstwa_UI.text = currentLayer.ToString();
+            //Warstwa_UI.text = currentLayer.ToString();
+            Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
             SliderComponent.value = 3.2f;
             SliderSetSpeed(3.2f);
         }
@@ -343,7 +348,6 @@ public class CameraPlayer_Script : MonoBehaviour
             case 0: //CelestialBody
                 speed = Mathf.Lerp(0.1f, 15f, s);
                 SpeedJednostki = " Mm/s";
-
 
                 odSlidera = Warstwy.CelestialBody; 
                 break;
@@ -410,7 +414,5 @@ public class CameraPlayer_Script : MonoBehaviour
             Prefab_SolarSys.GetComponent<Solar_System_Script>().NowySolarSys();
             Zmiana_Warswy(Warstwy.SolarSys);
         }
-        
-        //if (Input.GetKeyDown("0")) 
     }
 }
