@@ -19,7 +19,9 @@ public class Solar_System_Script : MonoBehaviour
 
     public GameObject planet;
     public int bodies_number;
-    public GameObject body;
+    private
+        Transform parent_transform;
+    public GameObject parent_gameobject;
 
     private List<string> SolarSysContent = new List<string>();
     public bool NieMaPlanet;
@@ -34,6 +36,7 @@ public class Solar_System_Script : MonoBehaviour
 
     void Start()
     {
+        parent_transform = parent_gameobject.transform;
         NowySolarSys();
     }
 
@@ -43,13 +46,23 @@ public class Solar_System_Script : MonoBehaviour
 
     public void NowySolarSys()
     {
-        if (SolarSysContent.Count > 0)
-        {
-            ZniszczSolarSys();
-        }
+        ZniszczSolarSys();
+        //if (SolarSysContent.Count > 0)
+        //{
+        //    ZniszczSolarSys();
+        //}
+        //if (parent.transform.childCount > 0)
+        //{
+        //    ZniszczSolarSys();
+        //}
 
-        Instantiate(star, Vector3.zero, Quaternion.identity);
-        SolarSysContent.Add("Solar_Star_Pref(Clone)");
+        GameObject instancja;
+
+        instancja = Instantiate(star, Vector3.zero, Quaternion.identity);
+        //instancja.name = "Solar_Star_Pref(Clone)";
+        instancja.name = "Main_Star";
+        instancja.transform.SetParent(parent_transform, true);
+        //SolarSysContent.Add("Solar_Star_Pref(Clone)");
 
         // Planety
         if (random_planets_number) 
@@ -63,13 +76,13 @@ public class Solar_System_Script : MonoBehaviour
 
         if (planet_number == 0)
         {
-            NieMaPlanet = true;
+            //NieMaPlanet = true;
             return;  //bo nie ma co stworzyc
         }
-        else 
-        { 
-            NieMaPlanet = false; 
-        }
+        //else 
+        //{ 
+        //    NieMaPlanet = false; 
+        //}
         
         List<OrbitParams> orbityList = new List<OrbitParams>();
         //OrbitParams current_orbit;
@@ -89,28 +102,40 @@ public class Solar_System_Script : MonoBehaviour
 
         orbityList.Sort(delegate (OrbitParams x, OrbitParams y) { return x.radius.CompareTo(y.radius); });
 
+        
+
         for (int planet_index = 0; planet_index < planet_number; planet_index++)
         {
-            Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>().Ustawianie(planet_index + 1, orbityList[planet_index].radius, orbityList[planet_index].theta, orbityList[planet_index].tiltX, orbityList[planet_index].tiltZ);
+            //Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>().Ustawianie(planet_index + 1, orbityList[planet_index].radius, orbityList[planet_index].theta, orbityList[planet_index].tiltX, orbityList[planet_index].tiltZ);
+            instancja = Instantiate(planet, Vector3.zero, Quaternion.identity);
+            instancja.GetComponent<Solar_Planet_Script>().Ustawianie(planet_index + 1, orbityList[planet_index].radius, orbityList[planet_index].theta, orbityList[planet_index].tiltX, orbityList[planet_index].tiltZ);
+            instancja.name = "Planet_" + (planet_index + 1);
+            instancja.transform.SetParent(parent_transform, true);
+
             //curr_planet = Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>();
-            SolarSysContent.Add("Planet_" + (planet_index + 1));
+            //SolarSysContent.Add("Planet_" + (planet_index + 1));
             Debug.Log("- Stworzenie: Planet_" + (planet_index + 1));    //DEBUG ONLY!!
         }
     }
 
     public void ZniszczSolarSys()
     {
-        Destroy(GameObject.Find("Solar_Star_Pref(Clone)"), 0.0f);
+        //Destroy(GameObject.Find("Solar_Star_Pref(Clone)"), 0.0f);
 
-        if (!NieMaPlanet)
+        //if (!NieMaPlanet)
+        //{
+        //    foreach (string GameObjectsName in SolarSysContent) 
+        //    {
+        //        //Debug.Log("- Niszczenie: "+GameObjectsName);    //DEBUG ONLY!!
+        //        Destroy( GameObject.Find(GameObjectsName), 0.0f ); 
+        //    }
+        //}
+
+        //SolarSysContent.Clear();
+
+        for (var i = parent_gameobject.transform.childCount - 1; i >= 0; i--)
         {
-            foreach (string GameObjectsName in SolarSysContent) 
-            {
-                Debug.Log("- Niszczenie: "+GameObjectsName);    //DEBUG ONLY!!
-                Destroy( GameObject.Find(GameObjectsName), 0.0f ); 
-            }
+            Object.Destroy(parent_gameobject.transform.GetChild(i).gameObject);
         }
-
-        SolarSysContent.Clear();
     }
 }

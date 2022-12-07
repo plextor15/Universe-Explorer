@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6239894195415669378}
   m_Layer: 19
-  m_Name: Bodies
+  m_Name: Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690170849316934181}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3683384218843633944
 GameObject:
@@ -61,7 +61,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690170849316934181}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1372138975263729174
 SphereCollider:
@@ -91,7 +91,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2544132813372068368
 Transform:
   m_ObjectHideFlags: 0
@@ -137,8 +137,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2544132813372068368}
-  - {fileID: 6239894195415669378}
   - {fileID: 6638720131892510446}
+  - {fileID: 6239894195415669378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,4 +163,5 @@ MonoBehaviour:
   maxTilt: 2.5
   planet: {fileID: 1973310136258973943, guid: 024fbd266fe731740938fb31ff5a6335, type: 3}
   bodies_number: 1
-  body: {fileID: 7596100812139494700, guid: f4206289f391ba14e84bce2032abfd08, type: 3}
+  parent: {fileID: 0}
+  NieMaPlanet: 0

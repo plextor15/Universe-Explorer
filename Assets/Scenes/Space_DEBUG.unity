@@ -679,9 +679,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 389420288}
+    - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+        type: 3}
       propertyPath: planet_number
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+        type: 3}
+      propertyPath: parent_gameobject
+      value: 
+      objectReference: {fileID: 1714681282}
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
       propertyPath: public_planet_number
@@ -708,6 +718,12 @@ Transform:
 --- !u!1 &389420287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6570844991390283462, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+    type: 3}
+  m_PrefabInstance: {fileID: 389420285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &389420288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6239894195415669378, guid: 5a6573ecaf9237e4f9473f5830e6e644,
     type: 3}
   m_PrefabInstance: {fileID: 389420285}
   m_PrefabAsset: {fileID: 0}
@@ -2099,6 +2115,12 @@ Transform:
   m_Father: {fileID: 1729853111}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1714681282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 650067913005271810, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+    type: 3}
+  m_PrefabInstance: {fileID: 389420285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1729853110
 GameObject:
   m_ObjectHideFlags: 0
