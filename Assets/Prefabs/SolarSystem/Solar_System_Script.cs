@@ -22,7 +22,7 @@ public class Solar_System_Script : MonoBehaviour
     public GameObject body;
 
     private List<string> SolarSysContent = new List<string>();
-    private bool NieMaPlanet;
+    public bool NieMaPlanet;
 
     public struct OrbitParams
     {
@@ -43,6 +43,11 @@ public class Solar_System_Script : MonoBehaviour
 
     public void NowySolarSys()
     {
+        if (SolarSysContent.Count > 0)
+        {
+            ZniszczSolarSys();
+        }
+
         Instantiate(star, Vector3.zero, Quaternion.identity);
         SolarSysContent.Add("Solar_Star_Pref(Clone)");
 
@@ -89,6 +94,7 @@ public class Solar_System_Script : MonoBehaviour
             Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>().Ustawianie(planet_index + 1, orbityList[planet_index].radius, orbityList[planet_index].theta, orbityList[planet_index].tiltX, orbityList[planet_index].tiltZ);
             //curr_planet = Instantiate(planet, Vector3.zero, Quaternion.identity).GetComponent<Solar_Planet_Script>();
             SolarSysContent.Add("Planet_" + (planet_index + 1));
+            Debug.Log("- Stworzenie: Planet_" + (planet_index + 1));    //DEBUG ONLY!!
         }
     }
 
@@ -98,7 +104,11 @@ public class Solar_System_Script : MonoBehaviour
 
         if (!NieMaPlanet)
         {
-            foreach (string GameObjectsName in SolarSysContent) { Destroy(GameObject.Find(GameObjectsName), 0.0f); }
+            foreach (string GameObjectsName in SolarSysContent) 
+            {
+                Debug.Log("- Niszczenie: "+GameObjectsName);    //DEBUG ONLY!!
+                Destroy( GameObject.Find(GameObjectsName), 0.0f ); 
+            }
         }
 
         SolarSysContent.Clear();

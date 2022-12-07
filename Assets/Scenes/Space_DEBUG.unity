@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 235357317134790545, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 298396595485323424, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
       propertyPath: m_RootOrder
@@ -265,10 +270,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2840283768149598841, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980175266616618818, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3624122004685407253, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406194819316832057, guid: 5b9d7919d117c1744a3e48af47727dbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4802880751645703711, guid: 5b9d7919d117c1744a3e48af47727dbe,
         type: 3}
@@ -665,7 +685,7 @@ PrefabInstance:
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
       propertyPath: public_planet_number
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
