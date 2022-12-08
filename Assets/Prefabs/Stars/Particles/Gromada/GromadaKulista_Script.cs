@@ -18,16 +18,23 @@ public class GromadaKulista_Script : MonoBehaviour
     public float MaxGromadaR = 2.0f;
     private bool Niezmienione = true;
 
+    public void Ustawianie(GameObject player, GameObject promien, GameObject camerastars) 
+    {
+        this.Player = player;
+        this.Promien = promien;
+        this.CameraStars = camerastars;
+    }
 
     void Start()
     {
+        ps = GetComponent<ParticleSystem>();
         ps.trigger.SetCollider(0, Promien.GetComponent<Collider>());
     }
 
     void OnEnable()
     {
         //Debug.Log("-- Testowe OnEnable() --");
-        ps = GetComponent<ParticleSystem>();
+        //ps = GetComponent<ParticleSystem>();
         //Debug.Log(ps);
     }
 
@@ -47,9 +54,9 @@ public class GromadaKulista_Script : MonoBehaviour
                 //Debug.Log("od ostat FPS: "+ Time.deltaTime);
                 for (int i = 0; i < ileZebranych; i++)
                 {
-                    R = Random.Range(0.01f,1f); Debug.Log(R);
-                    R = (1 / (R)) - 1; Debug.Log(R);
-                    R = R * MaxGromadaR; Debug.Log(R);
+                    R = Random.Range(0.01f,1f);
+                    R = (1 / (R)) - 1;
+                    R = R * MaxGromadaR;
                     AngleXZ = Random.Range(0, 360f);
                     AngleY = Random.Range(0, 360f);
 

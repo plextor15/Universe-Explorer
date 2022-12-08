@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6507160599290930144}
   - component: {fileID: 2502031636857340527}
   m_Layer: 22
-  m_Name: GromadaKulistaD_Pref
+  m_Name: GromadaKulistaDUMB_Pref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
