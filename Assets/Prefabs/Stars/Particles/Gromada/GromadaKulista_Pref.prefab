@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2851953462850799186}
   - component: {fileID: 5608561667237577065}
   - component: {fileID: 6507160599290930144}
-  - component: {fileID: 2502031636857340527}
+  - component: {fileID: 6726990811119087733}
   m_Layer: 22
-  m_Name: GromadaKulista_Script
+  m_Name: GromadaKulista_Pref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.1
+  m_MaxParticleSize: 0.01
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -674,7 +674,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 100
+    maxNumParticles: 75
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -742,7 +742,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 0.5, z: 1}
+    m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -819,9 +819,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0
+    randomPositionAmount: 0.8
     radius:
-      value: 80
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -4873,7 +4873,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &2502031636857340527
+--- !u!114 &6726990811119087733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4882,10 +4882,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 531961211922083894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ad3a1b0bdd8d047a1a4883b7da316a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d00e1111a3ca4d4ba1dc428664bacb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   Promien: {fileID: 0}
   CameraStars: {fileID: 0}
   TrigModule: 0
+  MaxGromadaR: 0.2

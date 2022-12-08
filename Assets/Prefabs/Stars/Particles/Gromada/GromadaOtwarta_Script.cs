@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gromada_Script : MonoBehaviour
+public class GromadaOtwarta_Script : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Promien;
