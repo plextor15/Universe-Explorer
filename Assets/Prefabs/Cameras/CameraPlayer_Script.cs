@@ -286,10 +286,20 @@ public class CameraPlayer_Script : MonoBehaviour
 
             previousLayer = currentLayer;
             currentLayer = Warstwy.Stars;
+
+            Camera_Galaxy.GetComponent<Camera>().nearClipPlane = 10f;
             
             if (previousLayer == Warstwy.SolarSys)
             {
                 Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
+
+                SliderComponent.value = 2.0f;
+                SliderSetSpeed(2.0f);
+            }
+            else 
+            {
+                SliderComponent.value = 2.5f;
+                SliderSetSpeed(2.5f);
             }
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = true;
@@ -303,14 +313,14 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 2.20f;
-            SliderSetSpeed(2.2f);
         }
 
         if (w == Warstwy.Galaxy)
         {
             previousLayer = currentLayer;
             currentLayer = Warstwy.Galaxy;
+
+            Camera_Galaxy.GetComponent<Camera>().nearClipPlane = 2f;
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
             Prefab_CelestialBdoy.SetActive(false);
@@ -323,8 +333,8 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 3.2f;
-            SliderSetSpeed(3.2f);
+            SliderComponent.value = 3.0f;
+            SliderSetSpeed(3.0f);
         }
     }
 
