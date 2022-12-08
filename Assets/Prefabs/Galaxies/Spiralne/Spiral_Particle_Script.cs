@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 //using UnityEditor.Rendering.LookDev;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
+//using UnityEngine.Rendering.VirtualTexturing;
 using static UnityEngine.ParticleSystem;
 
 public class Spiral_Particle_Script : MonoBehaviour

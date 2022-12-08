@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  Znacznik: {fileID: 5810772533538414460}
+  Znacznik: {fileID: 0}
   SliderComponent: {fileID: 0}
   SliderValue: 0
 --- !u!1 &2476682464208132856

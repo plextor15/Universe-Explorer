@@ -59,7 +59,7 @@ public class CameraPlayer_Script : MonoBehaviour
     void Start()
     {
         RotKamer();//ustawianie rotacji wszystkich kamer
-        Zmiana_Warswy(Warstwy.SolarSys);
+        Zmiana_Warswy(Warstwy.Stars);
 
         SliderSetSpeed(1.25f);
     }
