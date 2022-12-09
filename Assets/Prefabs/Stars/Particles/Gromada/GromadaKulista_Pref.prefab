@@ -296,7 +296,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.38602668, b: 0, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4885,8 +4885,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d00e1111a3ca4d4ba1dc428664bacb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  Promien: {fileID: 0}
-  CameraStars: {fileID: 0}
   TrigModule: 0
   MaxGromadaR: 0.2

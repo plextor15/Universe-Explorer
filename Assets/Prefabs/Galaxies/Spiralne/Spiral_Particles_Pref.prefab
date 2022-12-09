@@ -674,7 +674,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 1
-    maxNumParticles: 100
+    maxNumParticles: 300
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 1
@@ -821,7 +821,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1000
+      value: 2000
       mode: 0
       spread: 0
       speed:
@@ -4889,3 +4889,4 @@ MonoBehaviour:
   Kamera_Stars: {fileID: 0}
   Kamera_Galaxy: {fileID: 0}
   Spiralna: {fileID: 0}
+  Prefab_SpawnerGromad: {fileID: 0}

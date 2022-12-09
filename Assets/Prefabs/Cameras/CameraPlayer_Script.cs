@@ -250,8 +250,8 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 0.2f;
-            SliderSetSpeed(0.2f);
+            SliderComponent.value = 0.9f;
+            SliderSetSpeed(0.9f);
         }
 
         if (w == Warstwy.SolarSys)
@@ -350,8 +350,8 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            //SliderComponent.value = 3.0f;
-            //SliderSetSpeed(3.0f);
+            SliderComponent.value = 3.2f;
+            SliderSetSpeed(3.2f);
         }
     }
 

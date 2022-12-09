@@ -864,9 +864,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 350
+    randomPositionAmount: 0
     radius:
-      value: 50
+      value: 400
       mode: 0
       spread: 0
       speed:
@@ -5753,9 +5753,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 150
+    randomPositionAmount: 0
     radius:
-      value: 50
+      value: 200
       mode: 0
       spread: 0
       speed:
@@ -10497,7 +10497,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 40000
+    maxNumParticles: 50000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -10642,9 +10642,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 20
+    randomPositionAmount: 0
     radius:
-      value: 40
+      value: 50
       mode: 0
       spread: 0
       speed:
@@ -10763,7 +10763,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40000
+      scalar: 10000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10873,7 +10873,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 40
+        scalar: 10000
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -15007,7 +15007,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.990566, g: 0.98454475, b: 0.87375396, a: 0.09803922}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.078431375}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -15069,7 +15069,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 120
+      scalar: 100
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -15532,7 +15532,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 120
+      value: 100
       mode: 0
       spread: 0
       speed:
@@ -20346,9 +20346,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 50
+    randomPositionAmount: 0
     radius:
-      value: 50
+      value: 100
       mode: 0
       spread: 0
       speed:
@@ -24426,7 +24426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6651290522778782367}
   m_Layer: 22
-  m_Name: Stars_Particles_Elip
+  m_Name: Stars_Particles_Elip_BACKUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

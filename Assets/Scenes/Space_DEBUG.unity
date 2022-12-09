@@ -748,6 +748,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solar_System_Pref
       objectReference: {fileID: 0}
+    - target: {fileID: 7948678730544131276, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a6573ecaf9237e4f9473f5830e6e644, type: 3}
 --- !u!4 &389420286 stripped
@@ -1151,7 +1156,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 85b98644e29c21648bdf59023edc27d4, type: 2}
+      objectReference: {fileID: 2100000, guid: f058b35e6fa3aee41ab682446bc5a9a2, type: 2}
     - target: {fileID: 3381701051901035997, guid: e0d79797c829d5948b6cfd08feb7fed7,
         type: 3}
       propertyPath: m_Name
@@ -1211,6 +1216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883073103972920651, guid: e0d79797c829d5948b6cfd08feb7fed7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0d79797c829d5948b6cfd08feb7fed7, type: 3}

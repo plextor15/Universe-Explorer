@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Space_DEBUG.unity
-    guid: 16477b62aba08e14db006a6f9f1b3102
+    path: Assets/Scenes/Space.unity
+    guid: 2b653b72a1160644d91af72d5b3e7978
   m_configObjects: {}
