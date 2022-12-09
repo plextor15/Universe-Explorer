@@ -14,7 +14,7 @@ public class CameraPlayer_Script : MonoBehaviour
         Galaxy = 4
     }
 
-    public GameObject Stars;
+    //public GameObject Stars;
 
     //Kamery od warstw
     public GameObject Camera_Galaxy;
@@ -26,6 +26,7 @@ public class CameraPlayer_Script : MonoBehaviour
     //public GameObject Prefab_Galaxy;
     public GameObject Prefab_SpiralStars;
     public GameObject Prefab_EliptStars;
+    public GameObject Prefab_SpawnerGromad;
     public GameObject Prefab_SolarSys;
     public GameObject Prefab_CelestialBdoy;
 
@@ -100,6 +101,7 @@ public class CameraPlayer_Script : MonoBehaviour
 
         //
         //      !!! PREDKOSC TYLKO ZA POMOCA SLIDERA !!!
+        //                  Zmiana przez slidera
         //
         //Speed
         //if (Input.GetKey(KeyCode.LeftShift))
@@ -110,7 +112,18 @@ public class CameraPlayer_Script : MonoBehaviour
         //{
         //    ChangeSpeed(Input.mouseScrollDelta.y * multipl);
         //}
-
+        if (Input.mouseScrollDelta.y > 0)
+        {
+            float s = SliderComponent.value;
+            s = s + 0.05f;
+            SliderSetSpeed(s);
+        }
+        if (Input.mouseScrollDelta.y < 0)
+        {
+            float s = SliderComponent.value;
+            s = s - 0.05f;
+            SliderSetSpeed(s);
+        }
 
         //WSAD
         //float sliderVal = SliderComponent.value; //w Unity WASD zmienia slider automatycznie
@@ -152,6 +165,7 @@ public class CameraPlayer_Script : MonoBehaviour
 
         //
         //      !!! PREDKOSC TYLKO ZA POMOCA SLIDERA !!!
+        //                  Zmiana przez slidera
         //
         //if (Input.GetKey("r")) //reset speed jest w Sliderze od predkosci
         //{
@@ -298,6 +312,8 @@ public class CameraPlayer_Script : MonoBehaviour
             }
             else 
             {
+                //Prefab_CelestialBdoy.SetActive(true); // Elipt/Spiral_Particles_Script sie tym zajmuja
+
                 SliderComponent.value = 2.5f;
                 SliderSetSpeed(2.5f);
             }
@@ -320,10 +336,11 @@ public class CameraPlayer_Script : MonoBehaviour
             previousLayer = currentLayer;
             currentLayer = Warstwy.Galaxy;
 
-            Camera_Galaxy.GetComponent<Camera>().nearClipPlane = 2f;
+            Camera_Galaxy.GetComponent<Camera>().nearClipPlane = 0.1f;
+            Prefab_SpawnerGromad.SetActive(false);
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
-            Prefab_CelestialBdoy.SetActive(false);
+            Prefab_CelestialBdoy.SetActive(false); //jakiekolwiek by nie byly, to sa wszystkie niszczone
 
             //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
@@ -333,8 +350,8 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 3.0f;
-            SliderSetSpeed(3.0f);
+            //SliderComponent.value = 3.0f;
+            //SliderSetSpeed(3.0f);
         }
     }
 

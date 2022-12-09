@@ -6,7 +6,7 @@ public class SpawnerGromad_Script : MonoBehaviour
 {
     public bool CzySpiralna = true;
     public int IleGromad = 10;
-    public float MaxOdlegloscOdCentrum = 400f;
+    public float MaxOdlegloscOdCentrum = 350f;
     public GameObject GromadaOtwarta;
     public GameObject GromadaKulista;
     public GameObject ParentOtwarte;
@@ -22,11 +22,11 @@ public class SpawnerGromad_Script : MonoBehaviour
         //Random.InitState(42);
         if (CzySpiralna)
         {
-            Debug.Log("Kuliste");
+            //Debug.Log("Kuliste");
             TworzenieGromad(IleGromad/2, 1, MaxOdlegloscOdCentrum);
-            Debug.Log("Otwarte");
+            //Debug.Log("Otwarte");
             TworzenieGromad(IleGromad/2, 2, MaxOdlegloscOdCentrum);
-            Debug.Log("Wszystkie");
+            //Debug.Log("Wszystkie");
         }
         else //tylko kuliste
         {
@@ -62,29 +62,50 @@ public class SpawnerGromad_Script : MonoBehaviour
         GameObject instancja;
         for (int i = 0; i < ile; i++)
         {
+            float AngleY = 0;
             if (rodzaj == 1)
             {
-                Debug.Log("Kuliste - tworzenie");
+                GromadaKulista.SetActive(true);
+
+                //Debug.Log("Kuliste - tworzenie");
                 float R = Random.Range(0.25f, 1f) * MaxOdleglosc;
                 float AngleXZ = Random.Range(0, 360f);
-                float AngleY = Random.Range(0, 2.7f);
+
+
+                if (CzySpiralna)
+                {
+                    AngleY = Random.Range(-2f, 2f);
+                }
+                else
+                {
+                    AngleY = Random.Range(-90f, 90f);
+                }
+
                 Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY)));
 
                 instancja = Instantiate(GromadaKulista, pozycja, Quaternion.identity);
                 //instancja.GetComponent<GromadaKulista_Script>().Ustawianie(Player, Promien, CameraStars);
                 instancja.transform.SetParent(ParentKuliste.transform);
+
+                GromadaKulista.SetActive(false);
+                //Debug.Log(CzySpiralna + " Kulista - "+R+" | "+instancja.transform.position);
             }
             if (rodzaj == 2)
             {
-                Debug.Log("Otwarte - tworzenie");
+                GromadaOtwarta.SetActive(true);
+
+                //Debug.Log("Otwarte - tworzenie");
                 float R = Random.Range(0.25f, 1f) * MaxOdleglosc;
                 float AngleXZ = Random.Range(0, 360f);
-                float AngleY = Random.Range(0, 30f);
+                AngleY = Random.Range(-2f, 2f);
                 Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY)));
 
                 instancja = Instantiate(GromadaOtwarta, pozycja, Quaternion.identity);
                 //instancja.GetComponent<GromadaKulista_Script>().Ustawianie(Player, Promien, CameraStars);
                 instancja.transform.SetParent(ParentOtwarte.transform);
+
+                GromadaOtwarta.SetActive(false);
+                //Debug.Log(CzySpiralna + " Otwarta - " + R + " | " + instancja.transform.position);
             }
             
         }

@@ -8,6 +8,7 @@ public class Elipt_Particles_Script : MonoBehaviour
     public GameObject Kamera_Stars;
     public GameObject Kamera_Galaxy;
     public GameObject Eliptyczna;
+    public GameObject Prefab_SpawnerGromad;
 
     //ParticleSystem.Particle p;
     private ParticleSystem ps;
@@ -57,6 +58,9 @@ public class Elipt_Particles_Script : MonoBehaviour
             Kamera_Stars.transform.Translate(Vector3.back * (Vector3.Distance(Kamera_Galaxy.transform.position, enter[0].position) * 100f), Space.Self);   // tyle co granica zmiany warstwy
             Kamera_Stars.transform.rotation = TMP;
             Kamera_Galaxy.transform.rotation = TMP;
+
+            Prefab_SpawnerGromad.GetComponent<SpawnerGromad_Script>().CzySpiralna = false;
+            Prefab_SpawnerGromad.SetActive(true);
 
             Player.GetComponent<CameraPlayer_Script>().Prefab_EliptStars.SetActive(true); //tak zeby nie bylo
             Player.GetComponent<CameraPlayer_Script>().Prefab_SpiralStars.SetActive(false); //tak zeby nie bylo

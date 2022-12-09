@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class GromadaKulista_Script : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject Promien;
+    //public GameObject Player;
+    //public GameObject Promien;
+    //public GameObject CameraStars;
 
     //ParticleSystem.Particle p;
     private ParticleSystem ps;
     List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
 
-    public GameObject CameraStars;
     public bool TrigModule = false;
 
     //od Gromady
     public float MaxGromadaR = 2.0f;
     private bool Niezmienione = true;
 
-    public void Ustawianie(GameObject player, GameObject promien, GameObject camerastars) 
-    {
-        this.Player = player;
-        this.Promien = promien;
-        this.CameraStars = camerastars;
-    }
+    //public void Ustawianie(GameObject player, GameObject promien, GameObject camerastars) 
+    //{
+    //    this.Player = player;
+    //    this.Promien = promien;
+    //    this.CameraStars = camerastars;
+    //}
 
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
-        ps.trigger.SetCollider(0, Promien.GetComponent<Collider>());
+        //ps.trigger.SetCollider(0, Promien.GetComponent<Collider>());
     }
 
     void OnEnable()
@@ -54,7 +54,7 @@ public class GromadaKulista_Script : MonoBehaviour
                 //Debug.Log("od ostat FPS: "+ Time.deltaTime);
                 for (int i = 0; i < ileZebranych; i++)
                 {
-                    R = Random.Range(0.01f,1f);
+                    R = Random.Range(0.1f,1f);
                     R = (1 / (R)) - 1;
                     R = R * MaxGromadaR;
                     AngleXZ = Random.Range(0, 360f);
@@ -69,7 +69,7 @@ public class GromadaKulista_Script : MonoBehaviour
         }
     }
 
-    void OnParticleTrigger()
+    /*void OnParticleTrigger()
     {
         if (TrigModule)
         {
@@ -100,5 +100,5 @@ public class GromadaKulista_Script : MonoBehaviour
             CameraStars.GetComponent<CameraStars_Script>().DoceloweMiejsce = partic_pos;
             CameraStars.GetComponent<CameraStars_Script>().WDrodze = true;
         }
-    }
+    }*/
 }

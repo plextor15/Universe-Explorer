@@ -38,7 +38,9 @@ public class CameraGalaxy_Script : MonoBehaviour
             //Debug.Log("No Stars");
             Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Galaxy);
             //Player.GetComponent<CameraPlayer_Script>().Stars_Pref.GetComponent<ParticleSystem>().Clear();
-            Player.GetComponent<CameraPlayer_Script>().speed /= 100f;
+            
+            //SLIDER WSZYSTKO ROBI
+            //Player.GetComponent<CameraPlayer_Script>().speed /= 100f;
         }
     }
 }
