@@ -42,8 +42,8 @@ public class CameraPlayer_Script : MonoBehaviour
     public Warstwy odSlidera;
     private bool pendingLayer = false;
     public float speed;
-    public float multipl = 1.2f;
-    public float multiplBoost = 1000f;
+    public float multipl = 0.01f;
+    //public float multiplBoost = 1000f;
     //public GameObject Stars_Pref;
 
     //UI
@@ -112,17 +112,13 @@ public class CameraPlayer_Script : MonoBehaviour
         //{
         //    ChangeSpeed(Input.mouseScrollDelta.y * multipl);
         //}
-        if (Input.mouseScrollDelta.y > 0)
+        if (Input.mouseScrollDelta.y != 0)
         {
             float s = SliderComponent.value;
-            s = s + 0.05f;
+            s = s + Input.mouseScrollDelta.y * multipl;
+            SliderComponent.value = s;
             SliderSetSpeed(s);
-        }
-        if (Input.mouseScrollDelta.y < 0)
-        {
-            float s = SliderComponent.value;
-            s = s - 0.05f;
-            SliderSetSpeed(s);
+            //Debug.Log(Input.mouseScrollDelta.y);
         }
 
         //WSAD
@@ -272,6 +268,17 @@ public class CameraPlayer_Script : MonoBehaviour
                 //Niszczenie+Tworzenie SolarSys
                 //Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
                 Prefab_SolarSys.GetComponent<Solar_System_Script>().NowySolarSys();
+                
+                SliderComponent.value = 1.7f;
+                SliderSetSpeed(1.7f);
+            }
+            else 
+            {
+                if (SliderComponent.value < 1.0f)
+                {
+                    SliderComponent.value = 1.2f;
+                }
+                SliderSetSpeed(SliderComponent.value);
             }
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = false;
@@ -283,8 +290,6 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 1.2f;
-            SliderSetSpeed(1.2f);
         }
 
         if (w == Warstwy.Stars)
@@ -307,15 +312,21 @@ public class CameraPlayer_Script : MonoBehaviour
             {
                 Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
 
-                SliderComponent.value = 2.0f;
-                SliderSetSpeed(2.0f);
+                //SliderComponent.value = 2.0f;
+                //SliderSetSpeed(2.0f);
+
+                if (SliderComponent.value < 2.0f)
+                {
+                    SliderComponent.value = 2.0f;
+                }
+                SliderSetSpeed(SliderComponent.value);
             }
             else 
             {
                 //Prefab_CelestialBdoy.SetActive(true); // Elipt/Spiral_Particles_Script sie tym zajmuja
 
-                SliderComponent.value = 2.5f;
-                SliderSetSpeed(2.5f);
+                SliderComponent.value = 2.8f;
+                SliderSetSpeed(2.8f);
             }
 
             Camera_Stars.GetComponent<CameraStars_Script>().CzyWarstwaStars = true;
@@ -336,6 +347,9 @@ public class CameraPlayer_Script : MonoBehaviour
             previousLayer = currentLayer;
             currentLayer = Warstwy.Galaxy;
 
+            Prefab_EliptStars.SetActive(false);
+            Prefab_SpiralStars.SetActive(false);
+
             Camera_Galaxy.GetComponent<Camera>().nearClipPlane = 0.1f;
             Prefab_SpawnerGromad.SetActive(false);
 
@@ -350,8 +364,12 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 3.2f;
-            SliderSetSpeed(3.2f);
+
+            if (SliderComponent.value < 3.0f)
+            {
+                SliderComponent.value = 3.2f;
+            }
+            SliderSetSpeed(SliderComponent.value);
         }
     }
 
