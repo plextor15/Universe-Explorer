@@ -79,9 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Solar
-
-    System'
+  m_Text: "Uk\u0142ad\nPlanetarny"
 --- !u!1 &934056332863433086
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Stars
+  m_Text: 'Gwiazdy
 
 '
 --- !u!1 &1909911897519445395
@@ -423,7 +421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Galaxy
+  m_Text: 'Galaktyki
 
 '
 --- !u!1 &2376458127162714739
@@ -470,7 +468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: 0}
+  m_AnchoredPosition: {x: -95, y: 0}
   m_SizeDelta: {x: 20, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8106134635870861006
@@ -1013,7 +1011,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet
+  m_Text: Planeta
 --- !u!1 &8265553980496067545
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class ParticlowyScript : MonoBehaviour
     {
         if (Niezmienione)
         {
-            ParticleSystem.Particle[] particles = new ParticleSystem.Particle[IleParticli];
+            ParticleSystem.Particle[] particles = new ParticleSystem.Particle[10000];
             int ileZebranych = PS.GetParticles(particles);
             Debug.Log("Ile zebranych"+ ileZebranych);
             //Debug.Log("od ostat FPS: "+ Time.deltaTime);

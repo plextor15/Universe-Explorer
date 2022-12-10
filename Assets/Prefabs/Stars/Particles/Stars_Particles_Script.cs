@@ -61,7 +61,6 @@ public class Stars_Particles_Script : MonoBehaviour
 
             if (numEnter != 0) //gdziekolwiek jest, przechodzi na Layer.Stars
             {
-                //Debug.Log("-- przechodzi na Layer.Stars --");
                 Player.GetComponent<CameraPlayer_Script>().Zmiana_Warswy(CameraPlayer_Script.Warstwy.Stars);
             }
 

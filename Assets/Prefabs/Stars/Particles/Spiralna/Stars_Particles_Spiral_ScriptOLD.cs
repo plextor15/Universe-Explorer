@@ -26,9 +26,9 @@ public class Stars_Particles_Spiral_ScriptOLD : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("-- Testowe OnEnable() --");
+        //Debug.Log("-- Testowe OnEnable() --");
         ps = GetComponent<ParticleSystem>();
-        Debug.Log(ps);
+        //Debug.Log(ps);
     }
 
     void Update()

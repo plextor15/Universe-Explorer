@@ -22,7 +22,9 @@ public class Elipt_Particles_Script : MonoBehaviour
 
     void Start()
     {
-
+        //Na start ustawiane odpowiednio
+        Player.GetComponent<CameraPlayer_Script>().Prefab_EliptStars.SetActive(true);
+        Player.GetComponent<CameraPlayer_Script>().Prefab_SpiralStars.SetActive(false);
     }
     void Update()
     {
