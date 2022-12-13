@@ -70,7 +70,7 @@ public class CameraPlayer_Script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit(); //Wyjscie
 
         Movement();
-        DebugKeys();
+        //DebugKeys();
     }
 
     void Movement()
@@ -441,25 +441,28 @@ public class CameraPlayer_Script : MonoBehaviour
         }
     }
 
-    void DebugKeys()
-    {
-        //  Warstwy manualne przechodzenie (numery jak w enum) ----- DEBUG ONLY!!
-        if (Input.GetKeyDown("1")) Zmiana_Warswy(Warstwy.CelestialBody);
-        if (Input.GetKeyDown("2")) Zmiana_Warswy(Warstwy.SolarSys);
-        if (Input.GetKeyDown("3")) Zmiana_Warswy(Warstwy.Stars);
-        if (Input.GetKeyDown("4")) Zmiana_Warswy(Warstwy.Galaxy);
+    //void DebugKeys()
+    //{
+    //    if (Input.GetKey(KeyCode.Alpha0))
+    //    {
+    //        //  Warstwy manualne przechodzenie (numery jak w enum) ----- DEBUG ONLY!!
+    //        if (Input.GetKeyDown("1")) Zmiana_Warswy(Warstwy.CelestialBody);
+    //        if (Input.GetKeyDown("2")) Zmiana_Warswy(Warstwy.SolarSys);
+    //        if (Input.GetKeyDown("3")) Zmiana_Warswy(Warstwy.Stars);
+    //        if (Input.GetKeyDown("4")) Zmiana_Warswy(Warstwy.Galaxy);
 
-        if (Input.GetKeyDown("5")) // destroy & exit solar sys
-        {
-            Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
-            Zmiana_Warswy(Warstwy.Stars);
-        }
+    //        if (Input.GetKeyDown("5")) // destroy & exit solar sys
+    //        {
+    //            Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
+    //            Zmiana_Warswy(Warstwy.Stars);
+    //        }
 
-        if (Input.GetKeyDown("6")) // destroy & create solar sys
-        {
-            Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
-            Prefab_SolarSys.GetComponent<Solar_System_Script>().NowySolarSys();
-            Zmiana_Warswy(Warstwy.SolarSys);
-        }
-    }
+    //        if (Input.GetKeyDown("6")) // destroy & create solar sys
+    //        {
+    //            Prefab_SolarSys.GetComponent<Solar_System_Script>().ZniszczSolarSys();
+    //            Prefab_SolarSys.GetComponent<Solar_System_Script>().NowySolarSys();
+    //            Zmiana_Warswy(Warstwy.SolarSys);
+    //        }
+    //    }
+    //}
 }

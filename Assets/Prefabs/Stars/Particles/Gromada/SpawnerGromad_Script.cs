@@ -72,14 +72,16 @@ public class SpawnerGromad_Script : MonoBehaviour
                 float AngleXZ = Random.Range(0, 360f);
 
 
-                if (CzySpiralna)
-                {
-                    AngleY = Random.Range(-2f, 2f);
-                }
-                else
-                {
-                    AngleY = Random.Range(-90f, 90f);
-                }
+                //if (CzySpiralna)
+                //{
+                //    AngleY = Random.Range(-2f, 2f);
+                //}
+                //else
+                //{
+                //    AngleY = Random.Range(-90f, 90f);
+                //}
+
+                AngleY = Random.Range(-90f, 90f); //kuliste sferycznie wokol galaktyki
 
                 Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY)));
 
@@ -95,10 +97,14 @@ public class SpawnerGromad_Script : MonoBehaviour
                 GromadaOtwarta.SetActive(true);
 
                 //Debug.Log("Otwarte - tworzenie");
-                float R = Random.Range(0.25f, 1f) * MaxOdleglosc;
+                float R = Random.Range(0.5f, 1f) * MaxOdleglosc;
                 float AngleXZ = Random.Range(0, 360f);
-                AngleY = Random.Range(-2f, 2f);
-                Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY)));
+                //AngleY = Random.Range(-2f, 2f);
+                AngleY = Random.Range(-2f, 2f); //w ramionach galaktyki
+                //Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY)));
+
+                Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), 0, (R * Mathf.Cos(AngleY)));
+
 
                 instancja = Instantiate(GromadaOtwarta, pozycja, Quaternion.identity);
                 //instancja.GetComponent<GromadaKulista_Script>().Ustawianie(Player, Promien, CameraStars);

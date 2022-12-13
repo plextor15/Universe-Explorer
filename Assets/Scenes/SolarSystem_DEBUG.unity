@@ -282,6 +282,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
+      propertyPath: minRange
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+        type: 3}
       propertyPath: bodies_number
       value: 4
       objectReference: {fileID: 0}
@@ -292,13 +297,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
+      propertyPath: parent_gameobject
+      value: 
+      objectReference: {fileID: 813823197}
+    - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+        type: 3}
       propertyPath: public_planet_number
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3259062291015235779, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
       propertyPath: random_planets_number
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6451853731483566472, guid: 5a6573ecaf9237e4f9473f5830e6e644,
         type: 3}
@@ -317,3 +327,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a6573ecaf9237e4f9473f5830e6e644, type: 3}
+--- !u!1 &813823197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 650067913005271810, guid: 5a6573ecaf9237e4f9473f5830e6e644,
+    type: 3}
+  m_PrefabInstance: {fileID: 813823196}
+  m_PrefabAsset: {fileID: 0}
