@@ -12,6 +12,8 @@ public class SpawnerGromad_Script : MonoBehaviour
     public GameObject ParentOtwarte;
     public GameObject ParentKuliste;
 
+    public GameObject Galak_Spiral;
+
     ////do przekazania gromadom
     //public GameObject Player;
     //public GameObject Promien;
@@ -101,9 +103,11 @@ public class SpawnerGromad_Script : MonoBehaviour
                 float AngleXZ = Random.Range(0, 360f);
                 //AngleY = Random.Range(-2f, 2f);
                 AngleY = Random.Range(-2f, 2f); //w ramionach galaktyki
-                //Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY)));
+                //Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), (R * Mathf.Sin(AngleY) * Mathf.Sin(AngleXZ)), (R * Mathf.Cos(AngleY))); //OLD
 
-                Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), 0, (R * Mathf.Cos(AngleY)));
+                //Vector3 pozycja = new Vector3((R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), 0, (R * Mathf.Cos(AngleY)));
+                Vector3 pozycja = new Vector3( (R * Mathf.Sin(AngleY) * Mathf.Cos(AngleXZ)), 0, (R * Mathf.Cos(AngleY)) ); //jak spiral sie obroci od poziomu to jest maly problem
+                //pozycja = pozycja * Galak_Spiral.transform.position;
 
 
                 instancja = Instantiate(GromadaOtwarta, pozycja, Quaternion.identity);

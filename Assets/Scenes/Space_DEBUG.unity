@@ -849,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 5504105247229183419, guid: b55f95fe68343a34695fe4b1b54c12bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5504105247229183419, guid: b55f95fe68343a34695fe4b1b54c12bb,
         type: 3}
@@ -972,6 +972,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063546097}
     m_Modifications:
+    - target: {fileID: 25543415755344648, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 25543415755344648, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 25543415755344648, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 177541205372391484, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 177541205372391484, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 177541205372391484, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 631810260509171395, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 631810260509171395, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 631810260509171395, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 641501156074587401, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: m_Enabled
@@ -1082,6 +1127,21 @@ PrefabInstance:
       propertyPath: CameraStars
       value: 
       objectReference: {fileID: 745845029}
+    - target: {fileID: 1959060144254817626, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 1959060144254817626, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 1959060144254817626, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 2151556228842946216, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: Player
@@ -1093,6 +1153,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745845032}
     - target: {fileID: 2151556228842946216, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 2355655456068715870, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 2355655456068715870, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 2355655456068715870, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1113,6 +1188,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2571400918660474185, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 2639462992495992390, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 2639462992495992390, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 2639462992495992390, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1188,6 +1278,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3064950329806537292, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 3195880679072286663, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 3195880679072286663, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 3195880679072286663, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 3214392874922422674, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 3214392874922422674, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 3214392874922422674, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1197,11 +1317,71 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3512389483744748602, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 3512389483744748602, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 3512389483744748602, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 3947887457602010041, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 3947887457602010041, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 3947887457602010041, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 4104541827373221452, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 4104541827373221452, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 4104541827373221452, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 4508224386729143736, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: TriggerModule.primitives.Array.data[0]
       value: 
       objectReference: {fileID: 745845033}
+    - target: {fileID: 4512615825953177470, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 4512615825953177470, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 4512615825953177470, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 4633644754651631288, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: Player
@@ -1218,6 +1398,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4633644754651631288, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 4717193776417011130, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 4717193776417011130, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 4717193776417011130, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1258,6 +1453,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5403268205771197096, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 5623003844705403787, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 5623003844705403787, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 5623003844705403787, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1298,6 +1508,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6485541289671848297, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 6546649021268849201, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 6546649021268849201, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 6546649021268849201, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1377,6 +1602,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6865706560547113283, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 6865706560547113283, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 6865706560547113283, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 6883134414350006742, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 6883134414350006742, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 6883134414350006742, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 6895603064210107350, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: Player
@@ -1388,6 +1643,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745845032}
     - target: {fileID: 6895603064210107350, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 6922010023487889338, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 6922010023487889338, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 6922010023487889338, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 6972983778828298352, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 6972983778828298352, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 6972983778828298352, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: CameraStars
       value: 
@@ -1557,6 +1842,21 @@ PrefabInstance:
       propertyPath: CameraStars
       value: 
       objectReference: {fileID: 745845029}
+    - target: {fileID: 8945918336323419463, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 8945918336323419463, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 8945918336323419463, guid: 73133f2f12045c64d835e6db97cd2ad4,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 9111715913497382011, guid: 73133f2f12045c64d835e6db97cd2ad4,
         type: 3}
       propertyPath: m_Name
@@ -1574,6 +1874,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6651290522778782367, guid: 73133f2f12045c64d835e6db97cd2ad4,
     type: 3}
   m_PrefabInstance: {fileID: 705352380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &721932434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 983584346}
+    m_Modifications:
+    - target: {fileID: 3133696389770590692, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397490, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_Name
+      value: Elipt_SpriteParticles_Pref
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397490, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 339e36f1e991af140bd04af1bde15bfd, type: 3}
+--- !u!4 &721932435 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9157902816313397493, guid: 339e36f1e991af140bd04af1bde15bfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 721932434}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &730397429
 PrefabInstance:
@@ -2091,6 +2476,7 @@ Transform:
   - {fileID: 910650555}
   - {fileID: 1146807420}
   - {fileID: 1533008804}
+  - {fileID: 721932435}
   - {fileID: 420554727}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2910,6 +3296,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063546097}
     m_Modifications:
+    - target: {fileID: 560983021519404640, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 560983021519404640, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 560983021519404640, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 1105835820169407693, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 1105835820169407693, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 1105835820169407693, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 1134600682897924260, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 1134600682897924260, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 1134600682897924260, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
     - target: {fileID: 1318163033095367978, guid: ad55e40a62898b046a13782b13baf70a,
         type: 3}
       propertyPath: Player
@@ -2921,6 +3352,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745845032}
     - target: {fileID: 1318163033095367978, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: CameraStars
+      value: 
+      objectReference: {fileID: 745845029}
+    - target: {fileID: 5580625572074853510, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1001508173}
+    - target: {fileID: 5580625572074853510, guid: ad55e40a62898b046a13782b13baf70a,
+        type: 3}
+      propertyPath: Promien
+      value: 
+      objectReference: {fileID: 745845032}
+    - target: {fileID: 5580625572074853510, guid: ad55e40a62898b046a13782b13baf70a,
         type: 3}
       propertyPath: CameraStars
       value: 

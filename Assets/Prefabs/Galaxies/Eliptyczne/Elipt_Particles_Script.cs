@@ -50,7 +50,7 @@ public class Elipt_Particles_Script : MonoBehaviour
         {
             //Debug.Log("-- przechodzi na Layer.Stars --");
             Eliptyczna.SetActive(true);
-            //Eliptyczna.transform.rotation = Quaternion.Euler(enter[0].rotation3D);
+            Eliptyczna.transform.rotation = Quaternion.Euler(enter[0].rotation3D);
 
             //dziala
             var TMP = Kamera_Galaxy.transform.rotation;
