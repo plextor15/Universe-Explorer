@@ -481,7 +481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "PKM - rozgl\u0105danie"
+  m_Text: "PPM - rozgl\u0105danie"
 --- !u!1 &5496316440437630606
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "R - MIN pr\u0119dko\u015B\u0107 dla warstwy"
+  m_Text: "R - min. pr\u0119dko\u015B\u0107 dla warstwy"
 --- !u!1 &9122026516582361465
 GameObject:
   m_ObjectHideFlags: 0

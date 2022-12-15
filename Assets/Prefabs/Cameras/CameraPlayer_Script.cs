@@ -236,7 +236,7 @@ public class CameraPlayer_Script : MonoBehaviour
             //Wycentrowanie
             Camera_Body.transform.position = Vector3.zero;
             Camera_Body.transform.rotation = Camera_Sol.transform.rotation;
-            Camera_Body.transform.Translate(Vector3.back * 40f, Space.Self);
+            Camera_Body.transform.Translate(Vector3.back * 400f, Space.Self);
 
             //Debug.Log("Warstwa: " + currentLayer);
             Camera_Galaxy.GetComponent<Camera>().enabled = true;
@@ -246,8 +246,8 @@ public class CameraPlayer_Script : MonoBehaviour
 
             //Warstwa_UI.text = currentLayer.ToString();
             Slider_script.GetComponent<HUDSlider_Script>().UstawZnacznik(currentLayer);
-            SliderComponent.value = 0.9f;
-            SliderSetSpeed(0.9f);
+            SliderComponent.value = 0.8f;
+            SliderSetSpeed(0.8f);
         }
 
         if (w == Warstwy.SolarSys)
@@ -396,7 +396,7 @@ public class CameraPlayer_Script : MonoBehaviour
         switch (w)
         {
             case 0: //CelestialBody
-                speed = Mathf.Lerp(0.1f, 15f, s);
+                speed = Mathf.Lerp(1f, 150f, s);
                 SpeedJednostki = " Mm/s";
 
                 odSlidera = Warstwy.CelestialBody; 
